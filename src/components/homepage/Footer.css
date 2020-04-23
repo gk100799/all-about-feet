@@ -1,0 +1,23 @@
+
+li {
+    list-style-type:none;
+    color: #7b7b7b;
+    padding-bottom: 10px;
+  }
+  
+.paddingTop {
+    padding-top: 30px;
+  }
+  
+.colorlib-footer-links a{
+    color: #7b7b7b;
+    transition-duration: 0.4s;
+  }
+
+.colorlib-footer-links a:hover {
+  color: black;
+}
+
+.colorlib-footer-links a::before {
+    padding-bottom: 40px;
+}

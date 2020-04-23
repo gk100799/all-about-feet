@@ -1,0 +1,59 @@
+.mainFlex {
+    display: flex;
+  }
+  
+.leftBar {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 18px;
+  }
+
+.leftBar > div {
+    width: 255px;
+    padding-right: 0px;
+}
+  
+.rightBar {
+    flex:3;
+  }
+  
+.h4Tag {
+    padding: 15px 0px 8px 15px;
+    font-weight: 300;
+  }
+  
+.ulTag {
+    padding: 15px 15px 8px 15px;
+  }
+
+.ulTag a {
+    font-size: 14px;
+}
+/* a { */
+      /* padding: 40px 0px */
+  /* } */
+
+.flexUl {
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.flexUl a {
+    display:inline-block;
+    text-align: center;
+    background-color: #b1aeae ;
+    border-radius: 5%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding: 10px 0px;
+    margin: 0px 2px;
+}
+
+.flexUl a:hover{
+    color: white;
+    background-color: #595959;
+
+}
