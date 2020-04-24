@@ -28,7 +28,7 @@ class App extends PureComponent {
     return (
       <div>
       
-      <Router basename='/chapli-sante'>
+      <Router basename='/chapli-sante/'>
       <NavBarComp1 />
         {/* <Switch> */}
           <Route path="/" exact component={Homepage} />

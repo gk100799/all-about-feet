@@ -103,7 +103,7 @@ class NavBarComp1 extends Component {
             </Nav>
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
-                <Nav.Link onClick={this.showModal}>Sign up</Nav.Link>
+                <Nav.Link onClick={this.showModal}>Sign up1</Nav.Link>
                 <Nav.Link onClick={this.showModal}>Log in</Nav.Link>  
                 <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
                 <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link>
