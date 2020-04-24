@@ -14,6 +14,7 @@ import './fonts/fonts.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/homepage/Footer.css'
 import 'antd/dist/antd.css';
+import { BackTop } from 'antd';
 
 class App extends PureComponent { 
   constructor(props) {
@@ -27,20 +28,21 @@ class App extends PureComponent {
     return (
       <div>
       
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       <NavBarComp1 />
         <Switch>
-          <Route path='/men' exact component={Men} />
-          <Route path='/women' exact component={Women} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/" exact component={Homepage} />
-          <Route path="/cart" exact component={Cart} />
-          <Route path="/product/:pid" exact component={ProductPage} />
+          <Route path={process.env.PUBLIC_URL + '/men'} exact component={Men} />
+          <Route path={process.env.PUBLIC_URL + '/women'} exact component={Women} />
+          <Route path={process.env.PUBLIC_URL + '/about'} exact component={About} />
+          <Route path={process.env.PUBLIC_URL + '/contact'} exact component={Contact} />
+          <Route path={process.env.PUBLIC_URL + '/'} exact component={Homepage} />
+          <Route path={process.env.PUBLIC_URL + '/cart'} exact component={Cart} />
+          <Route path={process.env.PUBLIC_URL + "/product/:pid"} exact component={ProductPage} />
         </Switch>
         <div className="partnerfooter">
           <Partners />
           <Footer />
+          <BackTop />
         </div>
       </Router>
       </div>

@@ -88,7 +88,7 @@ class NavBarComp1 extends Component {
         </Modal>
 
         <Navbar className="fixedMenu" collapseOnSelect expand="lg" style={{height:'86px !important'}} fixed="top" bg="dark" variant="dark" style={{overflowY:'visible'}}>
-            <Navbar.Brand href="/">CHAPLI </Navbar.Brand>
+            <Navbar.Brand href="/">CHAPLI SANTE</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav

@@ -57,3 +57,9 @@
     background-color: #595959;
 
 }
+
+@media screen and (max-width: 992px)  {
+  .DeskOnly {
+    /* display:none; */
+  }
+}

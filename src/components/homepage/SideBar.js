@@ -14,7 +14,7 @@ export default function SideBar() {
 	);
 	}
     return (
-        <div className='mainFlex'>
+        <div className='mainFlex DeskOnly'>
             <div className='leftBar'>
                 <div className="side border mb-1">
                     <h5 className="h4Tag">BRAND</h5>
