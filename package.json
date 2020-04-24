@@ -1,5 +1,5 @@
 {
-  "homepage": "https://gk100799.github.io",
+  "homepage": "https://gk100799.github.io/chapli-sante",
   "name": "sante-frontend",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
