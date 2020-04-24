@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chapli-sante/precache-manifest.1a8915a744771b084ebc4f2ece8f47eb.js"
+  "/chapli-sante/precache-manifest.ad82e8f14a3cfc789ac14a893dcf413f.js"
 );
 
 self.addEventListener('message', (event) => {
