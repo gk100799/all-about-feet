@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/chapli-sante/static/css/main.554b406f.chunk.css",
-    "main.js": "/chapli-sante/static/js/main.7bc43759.chunk.js",
-    "main.js.map": "/chapli-sante/static/js/main.7bc43759.chunk.js.map",
+    "main.js": "/chapli-sante/static/js/main.6a0c4146.chunk.js",
+    "main.js.map": "/chapli-sante/static/js/main.6a0c4146.chunk.js.map",
     "runtime-main.js": "/chapli-sante/static/js/runtime-main.5d175e0f.js",
     "runtime-main.js.map": "/chapli-sante/static/js/runtime-main.5d175e0f.js.map",
     "static/css/2.51de6d05.chunk.css": "/chapli-sante/static/css/2.51de6d05.chunk.css",
-    "static/js/2.6d7ccc92.chunk.js": "/chapli-sante/static/js/2.6d7ccc92.chunk.js",
-    "static/js/2.6d7ccc92.chunk.js.map": "/chapli-sante/static/js/2.6d7ccc92.chunk.js.map",
+    "static/js/2.a6496597.chunk.js": "/chapli-sante/static/js/2.a6496597.chunk.js",
+    "static/js/2.a6496597.chunk.js.map": "/chapli-sante/static/js/2.a6496597.chunk.js.map",
     "index.html": "/chapli-sante/index.html",
-    "precache-manifest.ab753dbab6e3159cb406bb45e1fa46ff.js": "/chapli-sante/precache-manifest.ab753dbab6e3159cb406bb45e1fa46ff.js",
+    "precache-manifest.0dbe92eaa43feeb364508e52db104a5e.js": "/chapli-sante/precache-manifest.0dbe92eaa43feeb364508e52db104a5e.js",
     "service-worker.js": "/chapli-sante/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/chapli-sante/static/css/2.51de6d05.chunk.css.map",
     "static/css/main.554b406f.chunk.css.map": "/chapli-sante/static/css/main.554b406f.chunk.css.map",
-    "static/js/2.6d7ccc92.chunk.js.LICENSE.txt": "/chapli-sante/static/js/2.6d7ccc92.chunk.js.LICENSE.txt",
+    "static/js/2.a6496597.chunk.js.LICENSE.txt": "/chapli-sante/static/js/2.a6496597.chunk.js.LICENSE.txt",
     "static/media/brand-1.jpg": "/chapli-sante/static/media/brand-1.1d62e6a4.jpg",
     "static/media/brand-2.jpg": "/chapli-sante/static/media/brand-2.3dc613cb.jpg",
     "static/media/brand-3.jpg": "/chapli-sante/static/media/brand-3.1cc7855b.jpg",
@@ -40,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.5d175e0f.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.6d7ccc92.chunk.js",
+    "static/js/2.a6496597.chunk.js",
     "static/css/main.554b406f.chunk.css",
-    "static/js/main.7bc43759.chunk.js"
+    "static/js/main.6a0c4146.chunk.js"
   ]
 }
