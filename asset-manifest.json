@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/chapli-sante/static/css/main.554b406f.chunk.css",
-    "main.js": "/chapli-sante/static/js/main.6a0c4146.chunk.js",
-    "main.js.map": "/chapli-sante/static/js/main.6a0c4146.chunk.js.map",
+    "main.js": "/chapli-sante/static/js/main.d31077a0.chunk.js",
+    "main.js.map": "/chapli-sante/static/js/main.d31077a0.chunk.js.map",
     "runtime-main.js": "/chapli-sante/static/js/runtime-main.5d175e0f.js",
     "runtime-main.js.map": "/chapli-sante/static/js/runtime-main.5d175e0f.js.map",
     "static/css/2.51de6d05.chunk.css": "/chapli-sante/static/css/2.51de6d05.chunk.css",
     "static/js/2.a6496597.chunk.js": "/chapli-sante/static/js/2.a6496597.chunk.js",
     "static/js/2.a6496597.chunk.js.map": "/chapli-sante/static/js/2.a6496597.chunk.js.map",
     "index.html": "/chapli-sante/index.html",
-    "precache-manifest.0dbe92eaa43feeb364508e52db104a5e.js": "/chapli-sante/precache-manifest.0dbe92eaa43feeb364508e52db104a5e.js",
+    "precache-manifest.aecddfc8443239395577bc1417f97d4d.js": "/chapli-sante/precache-manifest.aecddfc8443239395577bc1417f97d4d.js",
     "service-worker.js": "/chapli-sante/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/chapli-sante/static/css/2.51de6d05.chunk.css.map",
     "static/css/main.554b406f.chunk.css.map": "/chapli-sante/static/css/main.554b406f.chunk.css.map",
@@ -42,6 +42,6 @@
     "static/css/2.51de6d05.chunk.css",
     "static/js/2.a6496597.chunk.js",
     "static/css/main.554b406f.chunk.css",
-    "static/js/main.6a0c4146.chunk.js"
+    "static/js/main.d31077a0.chunk.js"
   ]
 }
