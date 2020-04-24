@@ -8,7 +8,6 @@ import delivery from "../../img/icons/delivery.png"
 import voucher from "../../img/icons/voucher.png"
 import sales from "../../img/icons/sales.png"
 import { Link } from 'react-router-dom';
-import { Button, Container } from 'react-bootstrap';
 import "../../index.css"
 import SignUp from '../login/SignUp';
 import '../../fonts/fonts.css'
@@ -83,35 +82,35 @@ class NavBarComp1 extends Component {
           onOk={this.handleOk}
           confirmLoading={this.state.confirmLoading}
           onCancel={this.handleCancel}
+          style={{}}
         >
           <p>{this.state.ModalText}</p>
         </Modal>
 
-        <Navbar className="fixedMenu" collapseOnSelect expand="lg" style={{height:'86px !important'}} fixed="top" bg="dark" variant="dark" style={{overflowY:'visible'}}>
-            <Navbar.Brand href="/">CHAPLI SANTE</Navbar.Brand>
+        <Navbar onSelect='collapseOnSelect' className="fixedMenu" expand="lg" style={{}} fixed="top" bg="dark" variant="dark" style={{overflowY:'visible'}}>
+            <Navbar.Brand ><Link to='/' className="linkTag">CHAPLI SANTE</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
             activeKey={`/${this.state.activeTab}`}
             className="mr-auto"
             >
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id1')} href="/">Home</Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id2')} href="/men">Men</Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id3')} href="/women">Women</Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id4')} href="/about">About</Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id5')} href="/contact">Contact</Nav.Link>
+                <Nav.Link onClick={(e) => this.activeTabChange(e,'id1')} ><Link to='/' className="linkTag">Home</Link></Nav.Link>
+                <Nav.Link onClick={(e) => this.activeTabChange(e,'id2')} ><Link to='/men' className="linkTag">Men</Link></Nav.Link>
+                <Nav.Link onClick={(e) => this.activeTabChange(e,'id3')} ><Link to='/women' className="linkTag">Women</Link></Nav.Link>
+                <Nav.Link onClick={(e) => this.activeTabChange(e,'id4')} ><Link to='/about' className="linkTag">About</Link></Nav.Link>
+                <Nav.Link onClick={(e) => this.activeTabChange(e,'id5')} ><Link to='/contact' className="linkTag">Contact</Link></Nav.Link>
             </Nav>
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
                 <Nav.Link onClick={this.showModal}>Sign up</Nav.Link>
                 <Nav.Link onClick={this.showModal}>Log in</Nav.Link>  
-                <Nav.Link href="/account">My account</Nav.Link>
-                <Nav.Link href="/cart">Cart</Nav.Link>
+                <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
+                <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Navbar>
         <div className="divSeparator"></div>
-        <button id="id2" className={this.state.menActive ? "active" :'none' } onClick={this.handleLShow}>Men</button>
     </div>
     
   );

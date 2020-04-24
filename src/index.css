@@ -364,6 +364,11 @@ code {
   margin-top: 20px; 
 }
 
+.linkTag, .linkTag:hover {
+  color: inherit;
+}
+
+
 @media screen and (max-width: 992px)  {
   .childWala {
     height:350px;
