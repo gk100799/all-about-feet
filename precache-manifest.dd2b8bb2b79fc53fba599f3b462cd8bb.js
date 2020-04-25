@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1ca1fb6d3604f60f4a1aa73bc7cffc36",
+    "revision": "df98ab3f7fede9a50bae358d26c66c59",
     "url": "/chapli-sante/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chapli-sante/static/css/2.51de6d05.chunk.css"
   },
   {
-    "revision": "6494e9de3fae4aac9e25",
+    "revision": "4d1bf59e2800c0dc244b",
     "url": "/chapli-sante/static/css/main.6d0cd385.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chapli-sante/static/js/2.0595be31.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6494e9de3fae4aac9e25",
-    "url": "/chapli-sante/static/js/main.19ca3880.chunk.js"
+    "revision": "4d1bf59e2800c0dc244b",
+    "url": "/chapli-sante/static/js/main.abfde627.chunk.js"
   },
   {
     "revision": "055f707a85d1df45c5e3",
