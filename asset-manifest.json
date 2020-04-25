@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/chapli-sante/static/css/main.554b406f.chunk.css",
-    "main.js": "/chapli-sante/static/js/main.d31077a0.chunk.js",
-    "main.js.map": "/chapli-sante/static/js/main.d31077a0.chunk.js.map",
+    "main.css": "/chapli-sante/static/css/main.6d0cd385.chunk.css",
+    "main.js": "/chapli-sante/static/js/main.19ca3880.chunk.js",
+    "main.js.map": "/chapli-sante/static/js/main.19ca3880.chunk.js.map",
     "runtime-main.js": "/chapli-sante/static/js/runtime-main.5d175e0f.js",
     "runtime-main.js.map": "/chapli-sante/static/js/runtime-main.5d175e0f.js.map",
     "static/css/2.51de6d05.chunk.css": "/chapli-sante/static/css/2.51de6d05.chunk.css",
-    "static/js/2.a6496597.chunk.js": "/chapli-sante/static/js/2.a6496597.chunk.js",
-    "static/js/2.a6496597.chunk.js.map": "/chapli-sante/static/js/2.a6496597.chunk.js.map",
+    "static/js/2.0595be31.chunk.js": "/chapli-sante/static/js/2.0595be31.chunk.js",
+    "static/js/2.0595be31.chunk.js.map": "/chapli-sante/static/js/2.0595be31.chunk.js.map",
     "index.html": "/chapli-sante/index.html",
-    "precache-manifest.aecddfc8443239395577bc1417f97d4d.js": "/chapli-sante/precache-manifest.aecddfc8443239395577bc1417f97d4d.js",
+    "precache-manifest.1409fed9412b2f10226628f4faa745d6.js": "/chapli-sante/precache-manifest.1409fed9412b2f10226628f4faa745d6.js",
     "service-worker.js": "/chapli-sante/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/chapli-sante/static/css/2.51de6d05.chunk.css.map",
-    "static/css/main.554b406f.chunk.css.map": "/chapli-sante/static/css/main.554b406f.chunk.css.map",
-    "static/js/2.a6496597.chunk.js.LICENSE.txt": "/chapli-sante/static/js/2.a6496597.chunk.js.LICENSE.txt",
+    "static/css/main.6d0cd385.chunk.css.map": "/chapli-sante/static/css/main.6d0cd385.chunk.css.map",
+    "static/js/2.0595be31.chunk.js.LICENSE.txt": "/chapli-sante/static/js/2.0595be31.chunk.js.LICENSE.txt",
     "static/media/brand-1.jpg": "/chapli-sante/static/media/brand-1.1d62e6a4.jpg",
     "static/media/brand-2.jpg": "/chapli-sante/static/media/brand-2.3dc613cb.jpg",
     "static/media/brand-3.jpg": "/chapli-sante/static/media/brand-3.1cc7855b.jpg",
@@ -40,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.5d175e0f.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.a6496597.chunk.js",
-    "static/css/main.554b406f.chunk.css",
-    "static/js/main.d31077a0.chunk.js"
+    "static/js/2.0595be31.chunk.js",
+    "static/css/main.6d0cd385.chunk.css",
+    "static/js/main.19ca3880.chunk.js"
   ]
 }
