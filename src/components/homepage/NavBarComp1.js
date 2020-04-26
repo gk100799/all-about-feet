@@ -12,7 +12,7 @@ import "../../index.css"
 import SignUp from '../login/SignUp';
 import '../../fonts/fonts.css'
 import {Navbar, Nav} from 'react-bootstrap'
-import { Modal } from 'antd'
+import { Modal, Button } from 'antd'
 
 
 class NavBarComp1 extends Component {
@@ -20,22 +20,31 @@ class NavBarComp1 extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        activeTab : 
-          window.location.pathname === '/' ? '' : 
-          window.location.pathname === '/men' ? 'men' :
-          window.location.pathname === '/women' ? 'women' :
-          window.location.pathname === '/about' ? 'about' :
-          window.location.pathname === '/about' ? 'contact' : 'none',
+        activeTab : window.location.pathname.slice(1),
         ModalText: 'Content of the modal',
         visible: false,
         confirmLoading: false,
+        modalType : '',
       }
     }
 
-    showModal = () => {
+    showModal = (e) => {
+      this.setState(prevState => ({
+        activeTab : 'none',
+      }))
+      console.log(e.target.name);
+      if (e.target.name === "SignIn")
+      {
         this.setState({
+          modalType: 'SignIn',
           visible: true,
         });
+      } else {
+        this.setState({
+          modalType: 'SignUp',
+          visible: true,
+        });
+      }
     };
     
     handleOk = () => {
@@ -53,11 +62,16 @@ class NavBarComp1 extends Component {
     };
     
     handleCancel = () => {
+        this.setState({
+          activeTab: window.location.pathname.slice(1),
+        });
         console.log('Clicked cancel button');
         this.setState({
           visible: false,
+
         });
-    };
+        // this.setState(this.state);
+      };
 
     activeTabChange = (event,id) => {
       console.log(id);
@@ -73,38 +87,49 @@ class NavBarComp1 extends Component {
 
 
   render() {
+    // const { visible, loading } = this.state;
+    const collapse = true;
     return (
       <div>
 
         <Modal
-          title="Title"
+          title=""
+          // style={{ top: '0' }}
+          maskStyle={{backgroundColor:'white'}}
           visible={this.state.visible}
           onOk={this.handleOk}
           confirmLoading={this.state.confirmLoading}
           onCancel={this.handleCancel}
-          style={{}}
+          footer={[
+            <Button key="back" onClick={this.handleCancel}>
+              Return
+            </Button>,
+            <Button key="submit" type="primary" loading={this.state.confirmLoading} onClick={this.handleOk}>
+              Submit
+            </Button>,
+          ]}
         >
-          <p>{this.state.ModalText}</p>
+          <p>{this.state.modalType === "SignIn" ? <SignIn /> : <SignUp /> }</p>
         </Modal>
 
-        <Navbar onSelect='collapseOnSelect' className="fixedMenu" expand="lg" style={{}} fixed="top" bg="dark" variant="dark" style={{overflowY:'visible'}}>
+        <Navbar className="fixedMenu" collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark" style={{overflowY:'visible'}}>
             <Navbar.Brand ><Link to='/' className="linkTag">CHAPLI SANTE</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
-            activeKey={`/${this.state.activeTab}`}
+            activeKey= {`/${this.state.activeTab}`}
             className="mr-auto"
             >
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id1')} ><Link to='/' className="linkTag">Home</Link></Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id2')} ><Link to='/men' className="linkTag">Men</Link></Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id3')} ><Link to='/women' className="linkTag">Women</Link></Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id4')} ><Link to='/about' className="linkTag">About</Link></Nav.Link>
-                <Nav.Link onClick={(e) => this.activeTabChange(e,'id5')} ><Link to='/contact' className="linkTag">Contact</Link></Nav.Link>
+                <Nav.Link href='/' onClick={(e) => this.activeTabChange(e,'id1')} >Home</Nav.Link>
+                <Nav.Link href='/men' onClick={(e) => this.activeTabChange(e,'id2')} >Men</Nav.Link>
+                <Nav.Link href='/women' onClick={(e) => this.activeTabChange(e,'id3')} >Women</Nav.Link>
+                <Nav.Link href='/about' onClick={(e) => this.activeTabChange(e,'id4')} >About</Nav.Link>
+                <Nav.Link href='/contact' onClick={(e) => this.activeTabChange(e,'id5')} >Contact</Nav.Link>
             </Nav>
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
-                <Nav.Link onClick={this.showModal}>Sign up</Nav.Link>
-                <Nav.Link onClick={this.showModal}>Log in</Nav.Link>  
+                <Nav.Link name="SignUp" onClick={(e) => this.showModal(e)}>Sign up</Nav.Link>
+                <Nav.Link name="SignIn" onClick={(e) => this.showModal(e)}>Log in</Nav.Link>  
                 <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
                 <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link>
             </Nav>

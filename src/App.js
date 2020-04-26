@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Men from './components/homepage/Men'
 import Women from './components/homepage/Women'
 import About from './components/homepage/About'
@@ -28,11 +28,11 @@ class App extends PureComponent {
     return (
       <div>
       
-      <Router basename='/chapli-sante/'>
+      <Router basename='/'>
       <NavBarComp1 />
         {/* <Switch> */}
           <Route path="/" exact component={Homepage} />
-          <Route path='/men' exact component={Men} />
+          <Route path="/men" exact component={Men} />
           <Route path='/women' exact component={Women} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />

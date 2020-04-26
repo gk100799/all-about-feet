@@ -368,8 +368,50 @@ code {
   color: inherit;
 }
 
+/* .ant-modal {
+  width: 100% !important;
+  transform-origin: 1318px 0px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  height: 100% !important;
+}
+
+.ant-modal-body {
+  height: auto !important;
+  margin-top:0;
+}
+
+.ant-modal-wrap {
+  object-fit: cover;
+  height:auto !important;
+  z-index: 20000 !important;
+}
+.ant-modal-content {
+  -webkit-box-shadow: none;
+  box-shadow: none !important;
+} */
+
+.fixedMenu {
+  /* padding: 0px !important;
+  height: 60px !important;
+  margin: 0px 10px !important; */
+}
+
+#responsive-navbar-nav, .nav-link, .navbar-nav, .mr-auto {
+  /* height:2000.94 !important;
+  padding:37.08 !important; */
+}
+
 
 @media screen and (max-width: 992px)  {
+  .menPage {
+    display: none;
+  }
+  
+  .fixedMenu {
+    position: relative !important;
+  }
+
   .childWala {
     height:350px;
     bottom:350px;
@@ -464,6 +506,9 @@ code {
   }
   .colorlib-intro {
     padding: 60px 40px;
+  }
+  .intro {
+    font-size: x-large;
   }
   .imgMW {
     height:180px;

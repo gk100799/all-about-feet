@@ -42,7 +42,7 @@ class AntdModal extends React.Component {
           Open Modal with async logic
         </Button>
         <Modal
-          title="Title"
+          title="Signn"
           visible={visible}
           onOk={this.handleOk}
           confirmLoading={confirmLoading}
