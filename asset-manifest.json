@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/all-about-feet/static/css/main.ed643b93.chunk.css",
-    "main.js": "/all-about-feet/static/js/main.34bd790c.chunk.js",
-    "main.js.map": "/all-about-feet/static/js/main.34bd790c.chunk.js.map",
+    "main.css": "/all-about-feet/static/css/main.ac9f65c2.chunk.css",
+    "main.js": "/all-about-feet/static/js/main.de6af129.chunk.js",
+    "main.js.map": "/all-about-feet/static/js/main.de6af129.chunk.js.map",
     "runtime-main.js": "/all-about-feet/static/js/runtime-main.63eb5428.js",
     "runtime-main.js.map": "/all-about-feet/static/js/runtime-main.63eb5428.js.map",
     "static/css/2.51de6d05.chunk.css": "/all-about-feet/static/css/2.51de6d05.chunk.css",
-    "static/js/2.a85b8b29.chunk.js": "/all-about-feet/static/js/2.a85b8b29.chunk.js",
-    "static/js/2.a85b8b29.chunk.js.map": "/all-about-feet/static/js/2.a85b8b29.chunk.js.map",
+    "static/js/2.0e581ac9.chunk.js": "/all-about-feet/static/js/2.0e581ac9.chunk.js",
+    "static/js/2.0e581ac9.chunk.js.map": "/all-about-feet/static/js/2.0e581ac9.chunk.js.map",
     "index.html": "/all-about-feet/index.html",
-    "precache-manifest.3f31987e918788a766c614826d3d5d37.js": "/all-about-feet/precache-manifest.3f31987e918788a766c614826d3d5d37.js",
+    "precache-manifest.38558ac7ea87080e413e30e4cf0a9e8e.js": "/all-about-feet/precache-manifest.38558ac7ea87080e413e30e4cf0a9e8e.js",
     "service-worker.js": "/all-about-feet/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/all-about-feet/static/css/2.51de6d05.chunk.css.map",
-    "static/css/main.ed643b93.chunk.css.map": "/all-about-feet/static/css/main.ed643b93.chunk.css.map",
-    "static/js/2.a85b8b29.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.a85b8b29.chunk.js.LICENSE.txt",
+    "static/css/main.ac9f65c2.chunk.css.map": "/all-about-feet/static/css/main.ac9f65c2.chunk.css.map",
+    "static/js/2.0e581ac9.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.0e581ac9.chunk.js.LICENSE.txt",
     "static/media/brand-1.jpg": "/all-about-feet/static/media/brand-1.1d62e6a4.jpg",
     "static/media/brand-2.jpg": "/all-about-feet/static/media/brand-2.3dc613cb.jpg",
     "static/media/brand-3.jpg": "/all-about-feet/static/media/brand-3.1cc7855b.jpg",
@@ -40,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.63eb5428.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.a85b8b29.chunk.js",
-    "static/css/main.ed643b93.chunk.css",
-    "static/js/main.34bd790c.chunk.js"
+    "static/js/2.0e581ac9.chunk.js",
+    "static/css/main.ac9f65c2.chunk.css",
+    "static/js/main.de6af129.chunk.js"
   ]
 }
