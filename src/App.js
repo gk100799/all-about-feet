@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Men from './components/homepage/Men'
 import Women from './components/homepage/Women'
@@ -15,12 +15,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/homepage/Footer.css'
 import 'antd/dist/antd.css';
 import { BackTop } from 'antd';
+import SignIn from './components/login/SignIn';
+import SignUp from './components/login/SignUp';
 
-class App extends PureComponent { 
+class App extends Component { 
   constructor(props) {
     super(props)
     this.state = {
     loggedIn : false,
+    location : this.props.location === '/login' ? false : this.props.location === '/signup' ? false : true
   }
   }
   
@@ -29,8 +32,10 @@ class App extends PureComponent {
       <div>
       
       <Router basename='/'>
-      <NavBarComp1 />
-        {/* <Switch> */}
+      {/* { this.state.location && <NavBarComp1 /> } */}
+      {/* <NavBarComp1 /> */}
+        {/* <Switch> */} 
+          <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={NavBarComp1} />
           <Route path="/" exact component={Homepage} />
           <Route path="/men" exact component={Men} />
           <Route path='/women' exact component={Women} />
@@ -38,13 +43,16 @@ class App extends PureComponent {
           <Route path="/contact" exact component={Contact} />
           <Route path="/cart" exact component={Cart} />
           <Route path="/product/:pid" exact component={ProductPage} />
+          <Route path='/login' exact component={SignIn} /> 
+          <Route path='/signup' exact component={SignUp} /> 
         {/* </Switch> */}
         <div className="partnerfooter">
-          <Partners />
-          <Footer />
-          <BackTop />
+        <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={Partners} />
+          <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={Footer} />
         </div>
+        {/* <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={BackToTopComp1} /> */}
       </Router>
+      <BackTop style={{right:'35px'}} />
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import Poster from './Poster'
 import Blocks from './Blocks'
 import SideBar from './SideBar'
+import '../../index.css'
 
 function Men() {
     return (
@@ -9,7 +10,7 @@ function Men() {
             <div className='menPage' style={{}}>
                 <Poster name="MEN'S"/>
                 <Blocks />
-                <SideBar />
+                <SideBar className='desktopView'/>
             </div>  
             
         </div>

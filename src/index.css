@@ -23,7 +23,7 @@ code {
 
 
 .CarouselComp1 {
-
+/* padding-top: ; */
 }
 
 .CarouselComp1 img {
@@ -404,9 +404,9 @@ code {
 
 
 @media screen and (max-width: 992px)  {
-  .menPage {
+  /* .DeskOnly {
     display: none;
-  }
+  } */
   
   .fixedMenu {
     position: relative !important;
