@@ -8,7 +8,10 @@ import '../../index.css'
 // import Footer from './Footer';
 import AnimatedButton from './AnimatedButton'
 
+
+
 function Homepage() {
+  
   return (
     <div>
     <CarouselComp />
@@ -17,7 +20,7 @@ function Homepage() {
     <div className='bestsellers' style={{}}>
         <h2 style={{display:'block',textAlign:'center'}}> BEST SELLERS </h2>
     </div>
-    <div className='ProductsAll' style={{}}><ProductsComp /></div>
+    <div className='ProductsAll' style={{}}><ProductsComp url='products' /></div>
     <AnimatedButton name="Shop All Products"/>
     {/* <Partners />
     <Footer /> */}

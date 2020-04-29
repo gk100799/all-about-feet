@@ -2,21 +2,23 @@ import React from 'react'
 import {Card, Button} from 'react-bootstrap';
 import men from '../../img/item_1.jpg'
 import '../../index.css'
+import { Link } from 'react-router-dom';
 
-function Product() {
+function Product(props) {
+    const product = {...props.product}
     return (
         <div >
-            <div>
+            <Link to={`product/${product.pid}`}>
                 <Card className="productSingle" style={{  }}>
                 <div className="cardImg1"><Card.Img className='cardImg' variant="top" src={men} /></div>
-                <Card.Body className="cardBody" style={{}}>
-                    <div className='productName'> WOMEN'S BOOTS SHOES MACA </div>
-                    <div className='productPrice' style={{}}>$139.00</div>
+                <Card.Body className="cardBody" style={{color: 'black'}}>
+                    <div className='productName'> {product.pname} </div>
+                    <div className='productPrice' style={{}}>${product.price}.00</div>
                 </Card.Body>
                 </Card>
-            </div>
+            </Link>
         </div>
-    )
+    )   
 }
 
 export default Product

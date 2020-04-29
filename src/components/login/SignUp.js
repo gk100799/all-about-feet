@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import PropTypes from 'prop-types';
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -41,7 +43,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp(props) {
   const classes = useStyles();
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
+  const handle_change = e => {
+    const name = e.target.name;
+    const value = e.target.value;
+    name === "username" ? setUsername(value) : 
+    name === "password" ? setPassword(value) : 
+    name === "firstName" ? setFirstName(value) :
+    name === "lastName" ? setLastName(value) :
+    setEmail(value)  
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -65,6 +81,8 @@ export default function SignUp(props) {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                {...firstName}
+                onChange={handle_change}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -76,6 +94,8 @@ export default function SignUp(props) {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
+                {...lastName}
+                onChange={handle_change}
               />
             </Grid>
             <Grid item xs={12}>
@@ -87,6 +107,8 @@ export default function SignUp(props) {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                {...email}
+                onChange={handle_change}
               />
             </Grid>
             <Grid item xs={12}>
@@ -99,14 +121,10 @@ export default function SignUp(props) {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                {...password}
+                onChange={handle_change}
               />
             </Grid>
-            {/* <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
-              />
-            </Grid> */}
           </Grid>
           <Button
             type="submit"
@@ -114,6 +132,7 @@ export default function SignUp(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={e => props.handle_signup(e, firstName, lastName, email, username, password)}
           >
             Sign Up
           </Button>
@@ -131,3 +150,8 @@ export default function SignUp(props) {
     </Container>
   );
 }
+
+
+SignUp.propTypes = {
+  handle_signup: PropTypes.func.isRequired
+};

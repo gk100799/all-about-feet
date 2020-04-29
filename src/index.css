@@ -25,13 +25,16 @@ code {
 .CarouselComp1 {
 /* padding-top: ; */
 }
+ 
+.carousel-indicators li {
+  height: unset !important;
+}
 
 .CarouselComp1 img {
   height: 590px
 }
 
 .carouselCompInside {
-  
 }
 
 .close-button {
@@ -82,15 +85,17 @@ code {
 .imgMW {
   width: 100%;
 }
-
-/* .productsClass > * {
+/* 
+.productsClass > * {
   flex:1;
-}
+} */
 
 .productsClass {
-  max-width:250px;
-  /* justify-content: space-evenly; */
-/* }  */
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items:center;
+  grid-gap:0px;
+} 
 
 .cardImg {
   height: 253px;
@@ -159,17 +164,22 @@ code {
 }
 
 .carouselProduct {
-  flex: 1.5;
+  flex: 2;
   margin: 0px 80px;
   text-align: center;
-  height: 579px;
+  height: 582px;
+  width: 100%;
   border: 1px solid rgb(201, 199, 199);
+  /* object-fit: cover; */
 }
 
 .carouselProduct img {
-  object-fit: contain;
-  overflow: hidden;
-  height: auto;
+  object-fit: cover;
+  height: 580px;
+  width: inherit;
+  /* vertical-align: inherit; */
+  /* height:100%; */
+  /* overflow: hidden; */
 }
 
 .productFlexSide {
@@ -260,6 +270,15 @@ code {
   width: 250px;
   margin-bottom:50px;
   object-fit : cover;
+  transition-duration: 0.3s;
+  margin-top:5px;
+}
+
+.productSingle:hover {
+  box-shadow: 0 0 10px #bebebe;
+  /* width: 260px; */
+  margin-top: 0px;
+  
 }
 
 .cardBody {

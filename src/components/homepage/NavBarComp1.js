@@ -14,6 +14,8 @@ import '../../fonts/fonts.css'
 import {Navbar, Nav} from 'react-bootstrap'
 import { Modal, Button } from 'antd'
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 class NavBarComp1 extends Component {
     // const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
@@ -91,6 +93,38 @@ class NavBarComp1 extends Component {
     // if (this.state.location === '/login' || this.state.location === '/signup' ){
     //   return null;
     // }
+    const logged_out_nav = (
+      <>
+        <Nav.Link name="SignUp">
+          <Link 
+            to={{
+              pathname: "/signup",
+              state: 'sdf'
+            }}
+            className="linkTag"
+          >Sign up</Link>
+        </Nav.Link>
+
+        <Nav.Link name="SignIn" >
+          <Link 
+            to={{
+              pathname: "/login",
+              state: 'sdf'
+            }}
+            className="linkTag"
+          >Log in</Link>
+        </Nav.Link>  
+      </>
+    );
+
+    const logged_in_nav = (
+      <>
+        <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link>
+        <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
+        <Nav.Link onClick={this.props.handle_logout}>Logout</Nav.Link>
+      </>
+    );
+        
     return (
       <div>
           
@@ -131,10 +165,11 @@ class NavBarComp1 extends Component {
             </Nav>
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
-                <Nav.Link name="SignUp"><Link to='/signup' className="linkTag">Sign Up</Link></Nav.Link>
+                {this.props.logged_in ? logged_in_nav : logged_out_nav}
+                {/* <Nav.Link name="SignUp"><Link to='/signup' className="linkTag">Sign up</Link></Nav.Link>
                 <Nav.Link name="SignIn" ><Link to='/login' className="linkTag">Log in</Link></Nav.Link>  
                 <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
-                <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link>
+                <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link> */}
             </Nav>
             </Navbar.Collapse>
         </Navbar>
@@ -146,3 +181,9 @@ class NavBarComp1 extends Component {
 }
 
 export default withRouter(NavBarComp1);
+
+
+NavBarComp1.propTypes = {
+  logged_in: PropTypes.bool.isRequired,
+  handle_logout: PropTypes.func.isRequired
+};

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Carousel, Button} from 'react-bootstrap'
 import item1 from '../../img/item-1.jpg'
 import item2 from '../../img/item-2.jpg'
@@ -6,10 +6,19 @@ import item3 from '../../img/item-3.jpg'
 import item4 from '../../img/item-4.jpg'
 import '../../index.css'
 import cartLogo from '../../img/shoppingcart.png';
+import axios from 'axios'
 
-export default function ProductPage() {
-    const initialCount = 1
-    const [btnValue, setBtnValue] = useState(initialCount)
+
+export default function ProductPage(props) {
+    const [data, setData] = useState([])
+    const { pid } = props.match.params
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/product/${pid}`)
+          .then(res => setData(res.data))
+      },[pid]);
+ 
+    const [btnValue, setBtnValue] = useState(1)
 
     const updateBtnValuePlus = () => {
         setBtnValue(prevBtnValue => prevBtnValue + 1 )
@@ -22,7 +31,7 @@ export default function ProductPage() {
     }
 
     return (
-        <div className='productPage' style={{padding:'80px 80px'}}>
+        <div className='productPage' style={{margin:'50px 80px'}}>
             <div className='carouselProduct'>
                 <Carousel>
                     <Carousel.Item>
@@ -56,17 +65,18 @@ export default function ProductPage() {
                 </Carousel>
             </div>
             <div className='productFlexSide'>
-                <h5>WOMEN'S BOOTS SHOES MACA</h5>
-                <h5 style={{padding:'20px 0px 5px 0px'}}>$68.00</h5>
-                <h6 style={{padding:'10px 0px 5px 0px',lineHeight:'1.5em'}}>{`Even the all-powerful Pointing has no control about the
+                <h5>{data.pname}</h5>
+                <h5 style={{padding:'20px 0px 5px 0px'}}>${`${data.price}`}.00</h5>
+                {/* <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>{`Even the all-powerful Pointing has no control about the
                     blind texts it is an almost unorthographic life One day however 
-                    a small line of blind text by the name of Lorem Ipsum decided to 
-                    leave for the far World of Grammar.`}
+                    a small line of blind text by the name of Lorem Ipsum.`}
+                </h6> */}
+                <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>
+                    {data.description}
                  </h6>
-                 <br/>
-                 
+
                 <div >
-                    <h6 style={{paddingLeft:'2px'}}>{`SIZE`}</h6>
+                    <h6 style={{paddingLeft:'2px'}}>SIZE</h6>
                     <ul className="ulTag1 flexUl1">
                         <li><a href="#">7</a></li>
                         <li><a href="#">7.5</a></li>

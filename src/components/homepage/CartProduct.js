@@ -2,12 +2,15 @@ import React from 'react'
 import item6 from '../../img/item-6.jpg'
 
 export default function CartProduct(props) {
+    const images = require.context('../../img', true);
+    // const image = images()
+    const img = 'item-6'
     return (
         <div>
         <div style={{display:'flex', padding:'30px'}}>
             <div style={{flex:'1'}}>
                 <div style={{height:'180px', width:'180px'}}>
-                    <img style={{height:'100%', width:'auto', border:'1px solid #dadada'}} src={require('../../img/item-6.jpg')} alt="" />
+                    <img style={{height:'100%', width:'auto', border:'1px solid #dadada'}} src={require(`../../img/${props.imgSrc}.jpg`)} alt="" />
                 </div>
             </div>
             <div style={{flex:'3.5',padding:'10px 40px'}}>

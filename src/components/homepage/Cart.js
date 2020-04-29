@@ -35,9 +35,9 @@ export default class Cart extends Component {
                 <div className='childFlex1'>
                     <h5 style={{padding:'20px 30px 20px 30px'}}>My Cart (2)</h5>
                     <div style={{borderBottom: "1px solid #dadada", marginBottom:'10px'}}></div>
-                    <CartProduct imgSrc={'../../img/item-6.jpg'} btnValue={this.state.btnValue} updateBtnValueMinus={this.updateBtnValueMinus} updateBtnValuePlus={this.updateBtnValuePlus} />
-                    <CartProduct imgSrc={'../../img/item-6.jpg'} btnValue={this.state.btnValue} updateBtnValueMinus={this.updateBtnValueMinus} updateBtnValuePlus={this.updateBtnValuePlus} />
-                    <CartProduct imgSrc={'../../img/item-6.jpg'} btnValue={this.state.btnValue} updateBtnValueMinus={this.updateBtnValueMinus} updateBtnValuePlus={this.updateBtnValuePlus} />
+                    <CartProduct imgSrc={'item-6'} btnValue={this.state.btnValue} updateBtnValueMinus={this.updateBtnValueMinus} updateBtnValuePlus={this.updateBtnValuePlus} />
+                    <CartProduct imgSrc={'item-6'} btnValue={this.state.btnValue} updateBtnValueMinus={this.updateBtnValueMinus} updateBtnValuePlus={this.updateBtnValuePlus} />
+                    <CartProduct imgSrc={'item-6'} btnValue={this.state.btnValue} updateBtnValueMinus={this.updateBtnValueMinus} updateBtnValuePlus={this.updateBtnValuePlus} />
                     <div style={{textAlign:'right', padding:'15px 25px 15px 0px', marginTop:'0px',boxShadow:'0 -5px 5px -5px rgba(83, 83, 83, 0.75)',position:'sticky', bottom:'0px', backgroundColor:'rgb(245, 244, 244)'}}>
                         <button className='buttonClass' style={{height:'40px', width:'150px', padding:'5px' }}>PLACE ORDER</button>
                     </div>

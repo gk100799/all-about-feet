@@ -3,8 +3,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from 'axios';
-
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -45,16 +45,27 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn(props) {
   const classes = useStyles();
-  const emailId = useFormInput('');
-  const password = useFormInput('');
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('');
 
-  const handleLogin = (e) =>  {
+  const handle_change = e => {
+    const name = e.target.name;
+    const value = e.target.value;
+    name === "username" ? setUsername(value) : setPassword(value)
+    // this.setState(prevstate => {
+    //   const newState = { ...prevstate };
+    //   newState[name] = value;
+    //   return newState;
+    // });
+  };
+
+  const NOhandleLogin = (e) =>  {
     e.preventDefault();
     const data = {
-      'username' : emailId.value,
-    'password': password.value }
+      'username' : username.value,
+      'password': password.value 
+    }
     
-
     axios.post("http://localhost:8000/login/", data)
       .then(res => {
         const loggedIn = res.data.loggedIn;
@@ -84,11 +95,12 @@ export default function SignIn(props) {
             required
             fullWidth
             id="email"
-            label="Email Address"
-            name="email"
+            label="Username"
+            name="username"
             autoComplete="email"
-            {...emailId}
+            {...username}
             autoFocus
+            onChange={handle_change}
           />
           <TextField
             variant="outlined"
@@ -101,10 +113,7 @@ export default function SignIn(props) {
             id="password"
             autoComplete="current-password"
             {...password}
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            onChange={handle_change}
           />
           <Button
             type="submit"
@@ -112,7 +121,7 @@ export default function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={handleLogin}
+            onClick={e => props.handle_login(e, username, password)}
           >
             Sign In
           </Button>
@@ -124,7 +133,7 @@ export default function SignIn(props) {
             </Grid>
             <Grid item>
               <a>
-                <Link className={classes.linkTag} onClick={()=>props.toSignup()} variant="body2">
+                <Link className={classes.linkTag} to='/signup' variant="body2">
                 Don't have an account? Sign Up
               </Link>
               </a>
@@ -139,14 +148,7 @@ export default function SignIn(props) {
   );
 }
 
-const useFormInput = initialValue => {
-  const [value, setValue] = useState(initialValue);
- 
-  const handleChange = e => {
-    setValue(e.target.value);
-  }
-  return {
-    value,
-    onChange: handleChange
-  }
-}
+SignIn.propTypes = {
+  handle_login: PropTypes.func.isRequired
+};
+
