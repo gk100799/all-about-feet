@@ -4,8 +4,11 @@ import men from '../../img/item_1.jpg'
 import '../../index.css'
 import { Link } from 'react-router-dom';
 
+
+
 function Product(props) {
     const product = {...props.product}
+
     return (
         <div >
             <Link to={`product/${product.pid}`}>

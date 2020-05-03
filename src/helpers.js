@@ -12,7 +12,8 @@ export const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
     "Authorization": `JWT ${localStorage.getItem('token')}`
-  }
+  },
+  timeout: 10000
 });
 
 export const axiosInstanceFormData = axios.create({
@@ -36,6 +37,9 @@ axiosInstance.interceptors.response.use(
     return response;
   },
   error => {
+    if (error.response.status === 408 || error.code === 'ECONNABORTED') {
+        console.log(`A timeout happend on url ${error.config.url}`)
+      }
     return error;
   }
 );

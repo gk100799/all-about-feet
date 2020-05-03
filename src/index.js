@@ -7,11 +7,9 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-  // <ScrollToTop>
   <React.StrictMode>
       <App />
   </React.StrictMode>,
-  // </ScrollToTop>,
   document.getElementById('root')
 );
 

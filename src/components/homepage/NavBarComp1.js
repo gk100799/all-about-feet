@@ -119,7 +119,7 @@ class NavBarComp1 extends Component {
 
     const logged_in_nav = (
       <>
-        <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link>
+        <Nav.Link ><Link to='/cart' className="linkTag">{`Cart(${this.props.cart})`}</Link></Nav.Link>
         <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
         <Nav.Link onClick={this.props.handle_logout}>Logout</Nav.Link>
       </>
@@ -148,7 +148,7 @@ class NavBarComp1 extends Component {
           <p>{this.state.modalType === "SignIn" ? <SignIn /> : <SignUp /> }</p>
         </Modal>
 
-        <Navbar className="fixedMenu" collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark" style={{overflowY:'visible'}}>
+        <Navbar className="fixedMenu" collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark" style={{}}>
             <Navbar.Brand ><Link to='/' className="linkTag">All About Feet</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

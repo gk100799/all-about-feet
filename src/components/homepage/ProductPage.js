@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Carousel, Button} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
 import item1 from '../../img/item-1.jpg'
 import item2 from '../../img/item-2.jpg'
 import item3 from '../../img/item-3.jpg'
@@ -7,18 +7,23 @@ import item4 from '../../img/item-4.jpg'
 import '../../index.css'
 import cartLogo from '../../img/shoppingcart.png';
 import axios from 'axios'
+import {message} from 'antd'
+import { withRouter } from "react-router";
+import {axiosInstance} from '../../helpers';
+import { Button } from 'antd';
 
 
-export default function ProductPage(props) {
+function ProductPage(props) {
     const [data, setData] = useState([])
     const { pid } = props.match.params
+    const [btnValue, setBtnValue] = useState(1)
+    const [loading,setLoading] = useState(false)
+    const [added, setAdded] = useState(false)
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/product/${pid}`)
           .then(res => setData(res.data))
       },[pid]);
- 
-    const [btnValue, setBtnValue] = useState(1)
 
     const updateBtnValuePlus = () => {
         setBtnValue(prevBtnValue => prevBtnValue + 1 )
@@ -28,6 +33,42 @@ export default function ProductPage(props) {
         if (btnValue !== 1) {
             setBtnValue(prevBtnValue => prevBtnValue - 1 )
         }
+    }
+
+    message.config({
+        top: 80,
+    })
+
+    const error = () => {
+        message.error('Please Login to add products to cart', 3)
+    }
+
+    const addToCart = () => {
+        setLoading(true)
+        // setTimeout(function(){ 
+            axiosInstance.post(`/api/add-to-cart/${pid}_${btnValue}/`)
+            .then(res => {
+                if(res.created) {
+                props.handleCartInc()
+                }
+            })
+            .then(res => setLoading(false))
+            .then(res => setAdded(true))
+            .then(res => message.success('added to cart'))
+            .catch(err => {
+                message.error('Please try again');
+                setLoading(false);
+            })
+        //  }, 1000);
+        // console.log(result)
+    }
+
+    const handleClick = () => {
+        props.logged_in ? addToCart() : error()
+    }
+
+    const goToCart = () => {
+        props.history.push('/cart');
     }
 
     return (
@@ -109,9 +150,12 @@ export default function ProductPage(props) {
                     </span>
                 </div>
                 <div style={{}}>
-                    <button className="buttonClass2"><i><img style={{padding:'0px 10px 4px 0px'}}src={cartLogo} alt="" /></i>{`Add to Cart`}</button>
+                    <Button loading={loading} className="buttonClass2" onClick={added ? goToCart :handleClick}><i><img style={{padding:'0px 10px 4px 0px'}}src={cartLogo} alt="" /></i>{added ? `Go to Cart` : `Add to Cart`}</Button>
                 </div>
             </div>
         </div>
     )
 }
+
+
+export default withRouter(ProductPage)

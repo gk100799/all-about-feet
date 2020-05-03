@@ -22,6 +22,7 @@ import axios from 'axios'
 import { useHistory } from 'react-router-dom';
 
 
+
 class App extends Component { 
   constructor(props) {
     super(props)
@@ -29,9 +30,12 @@ class App extends Component {
       location : this.props.location === '/login' ? false : this.props.location === '/signup' ? false : true,
       logged_in: localStorage.getItem('token') ? true : false,
       username: '',
+      cart: 0,
     }
     this.handle_login = this.handle_login.bind(this);
     this.handle_signup = this.handle_signup.bind(this);
+    this.handleCartInc = this.handleCartInc.bind(this);
+    this.handleCartDec = this.handleCartDec.bind(this);
   }
   
   componentDidMount() {
@@ -43,7 +47,7 @@ class App extends Component {
       })
         .then(res => res.json())
         .then(json => {
-          this.setState({ username: json.username });
+          this.setState({ username: json.username, cart:json.cart });
         })
         .catch(err => console.log('hello'));
     }
@@ -95,6 +99,17 @@ class App extends Component {
     this.setState({ logged_in: false, username: '' });
   };
 
+  handleCartInc = () => {
+    this.setState({
+      cart : this.state.cart + 1,
+    })
+  }
+
+  handleCartDec = () => {
+    this.setState(prevState => ({
+      cart : prevState - 1,
+    }))
+  }
 
 
   render() {
@@ -108,17 +123,15 @@ class App extends Component {
           <Route 
             path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} 
             exact 
-            render={(props) => <NavBarComp1 logged_in={this.state.logged_in} handle_logout={this.handle_logout}/>}
+            render={(props) => <NavBarComp1 logged_in={this.state.logged_in} handle_logout={this.handle_logout} cart={this.state.cart}/>}
           />
           <Route path="/" exact component={Homepage} />
           <Route path="/men" exact component={Men} />
           <Route path='/women' exact component={Women} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
-          <Route path="/cart" exact component={Cart} />
-          <Route path="/product/:pid" exact component={ProductPage} />
-          {/* <Route path='/login' exact component={SignIn} handle_login={this.handle_login} /> 
-          <Route path='/signup' exact component={SignUp} handle_signup={this.handle_signup} />  */}
+          <Route path="/cart" exact render={(props) => <Cart handleCartDec={this.handleCartDec} />} />
+          <Route path="/product/:pid" exact render={(props) => <ProductPage logged_in={this.state.logged_in} handleCartInc={this.handleCartInc} />} />
           <Route path='/login' exact render={(props) => <SignIn handle_login={this.handle_login} />} /> 
           <Route path='/signup' exact render={(props) => <SignUp handle_signup={this.handle_signup} />} /> 
         {/* </Switch> */}
