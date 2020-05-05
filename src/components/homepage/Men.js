@@ -11,8 +11,7 @@ function Men() {
                 <Poster name="MEN'S"/>
                 <Blocks />
                 <SideBar className='desktopView'/>
-            </div>  
-            
+            </div> 
         </div>
     )
 }

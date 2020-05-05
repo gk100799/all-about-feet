@@ -11,9 +11,13 @@ import {message} from 'antd'
 import { withRouter } from "react-router";
 import {axiosInstance} from '../../helpers';
 import { Button } from 'antd';
+import { Select } from 'antd';
+
+const { Option } = Select;
 
 
 function ProductPage(props) {
+    const [allSizes, setAllSizes] = useState([4,5,6,7,8,9,10,11])
     const [data, setData] = useState([])
     const { pid } = props.match.params
     const [btnValue, setBtnValue] = useState(1)
@@ -23,7 +27,7 @@ function ProductPage(props) {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/product/${pid}`)
           .then(res => setData(res.data))
-      },[pid]);
+      },[]);
 
     const updateBtnValuePlus = () => {
         setBtnValue(prevBtnValue => prevBtnValue + 1 )
@@ -108,33 +112,21 @@ function ProductPage(props) {
             <div className='productFlexSide'>
                 <h5>{data.pname}</h5>
                 <h5 style={{padding:'20px 0px 5px 0px'}}>${`${data.price}`}.00</h5>
-                {/* <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>{`Even the all-powerful Pointing has no control about the
+                <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>{`Even the all-powerful Pointing has no control about the
                     blind texts it is an almost unorthographic life One day however 
                     a small line of blind text by the name of Lorem Ipsum.`}
-                </h6> */}
-                <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>
+                </h6>
+                {/* <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>
                     {data.description}
-                 </h6>
+                 </h6> */}
 
-                <div >
-                    <h6 style={{paddingLeft:'2px'}}>SIZE</h6>
-                    <ul className="ulTag1 flexUl1">
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">7.5</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">8.5</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">9.5</a></li>
-                        <li><a href="#">10</a></li>
-                        <li><a href="#">10.5</a></li>
-                        <li><a href="#">11</a></li>
-                        <li><a href="#">11.5</a></li>
-                        <li><a href="#">12</a></li>
-                        <li><a href="#">12.5</a></li>
-                        <li><a href="#">13</a></li>
-                        <li><a href="#">13.5</a></li>
-                        <li><a href="#">14</a></li>
-                    </ul>
+                <div style={{ padding: '20px 0px', alignItems:'center'}}>
+                    <h6 style={{paddingLeft:'0px', alignSelf:'center'}}>SIZE</h6>
+                    <Select style={{ width: 70, margin: '5px 0px 10px 2px' }} allowClear>
+                        {allSizes.map((item,index) => (
+                            <Option value={item}>{item}</Option>
+                        ))}
+					</Select>
                 </div>
                 <div className="input-group mb-4" style={{paddingLeft:'4px'}}>
                     <span className="input-group-btn">

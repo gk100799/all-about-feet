@@ -2,7 +2,7 @@ import React from 'react';
 import CarouselComp from './CarouselComp';
 import Waste_1 from './Waste_1'
 import MenWomen from './MenWomen'
-import ProductsComp from './ProductsComp'
+import HomeProducts from './HomeProducts'
 import '../../index.css'
 // import Partners from './Partners'
 // import Footer from './Footer';
@@ -20,7 +20,7 @@ function Homepage() {
     <div className='bestsellers' style={{}}>
         <h2 style={{display:'block',textAlign:'center'}}> BEST SELLERS </h2>
     </div>
-    <div className='ProductsAll' style={{}}><ProductsComp url='products' /></div>
+    <div className='ProductsAll' style={{}}><HomeProducts category="men"/></div>
     <AnimatedButton name="Shop All Products"/>
     {/* <Partners />
     <Footer /> */}
