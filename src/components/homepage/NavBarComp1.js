@@ -166,10 +166,6 @@ class NavBarComp1 extends Component {
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
                 {this.props.logged_in ? logged_in_nav : logged_out_nav}
-                {/* <Nav.Link name="SignUp"><Link to='/signup' className="linkTag">Sign up</Link></Nav.Link>
-                <Nav.Link name="SignIn" ><Link to='/login' className="linkTag">Log in</Link></Nav.Link>  
-                <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
-                <Nav.Link ><Link to='/cart' className="linkTag">Cart</Link></Nav.Link> */}
             </Nav>
             </Navbar.Collapse>
         </Navbar>

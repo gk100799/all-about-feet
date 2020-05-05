@@ -7,7 +7,6 @@ import CartProduct from './CartProduct'
 import {axiosInstance} from '../../helpers'
 import { css } from "@emotion/core";
 import {BeatLoader} from 'react-spinners'
-import LoadingOverlay from 'react-loading-overlay';
 import {ScaleLoader} from 'react-spinners'
 
 export default function Cart() {
@@ -55,13 +54,10 @@ export default function Cart() {
                     color={"#123abc"}
                     loading={loading}
                     />
-                    {cartItems.map((item,index) => (
+                    {cartItems ? cartItems.map((item,index) => (
                         <CartProduct imgSrc={item.imagename} btnValue={btnValue} updateBtnValueMinus={updateBtnValueMinus} updateBtnValuePlus={updateBtnValuePlus} />
-                    )) }
+                    )) : 'Cart is empty!!' }
                 </div>
-                {/* <CartProduct imgSrc={'item-6'} btnValue={btnValue} updateBtnValueMinus={updateBtnValueMinus} updateBtnValuePlus={updateBtnValuePlus} />
-                <CartProduct imgSrc={'item-6'} btnValue={btnValue} updateBtnValueMinus={updateBtnValueMinus} updateBtnValuePlus={updateBtnValuePlus} />
-                <CartProduct imgSrc={'item-6'} btnValue={btnValue} updateBtnValueMinus={updateBtnValueMinus} updateBtnValuePlus={updateBtnValuePlus} /> */}
                 <div style={{textAlign:'right', padding:'15px 25px 15px 0px', marginTop:'0px',boxShadow:'0 -5px 5px -5px rgba(83, 83, 83, 0.75)',position:'sticky', bottom:'0px', backgroundColor:'rgb(245, 244, 244)'}}>
                     <button className='buttonClass' style={{height:'40px', width:'150px', padding:'5px' }}>PLACE ORDER</button>
                 </div>

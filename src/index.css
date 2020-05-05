@@ -23,7 +23,7 @@ code {
 
 
 .CarouselComp1 {
-/* padding-top: ; */
+margin-top: -10px;
 }
  
 .carousel-indicators li {
@@ -85,10 +85,6 @@ code {
 .imgMW {
   width: 100%;
 }
-/* 
-.productsClass > * {
-  flex:1;
-} */
 
 .productsClass {
   display:grid;

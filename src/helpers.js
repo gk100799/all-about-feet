@@ -3,12 +3,12 @@ import axios from "axios";
 export const backendURL = "http://localhost:8000";
 
 export const request = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: backendURL,
   timeout: 10000
 });
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: backendURL,
   headers: {
     "Content-Type": "application/json",
     "Authorization": `JWT ${localStorage.getItem('token')}`
@@ -17,7 +17,7 @@ export const axiosInstance = axios.create({
 });
 
 export const axiosInstanceFormData = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: backendURL,
   headers: {
     "Content-Type": "multipart/form-data"
   }

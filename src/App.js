@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 import Men from './components/homepage/Men'
 import Women from './components/homepage/Women'
 import About from './components/homepage/About'
@@ -18,8 +18,7 @@ import { BackTop } from 'antd';
 import SignIn from './components/login/SignIn';
 import SignUp from './components/login/SignUp';
 import ScrollToTop from './components/homepage/ScrollToTop'
-import axios from 'axios'
-import { useHistory } from 'react-router-dom';
+import {axiosInstance, request} from './helpers'
 
 
 
@@ -32,20 +31,15 @@ class App extends Component {
       username: '',
       cart: 0,
     }
-    this.handle_login = this.handle_login.bind(this);
-    this.handle_signup = this.handle_signup.bind(this);
+    this.setstate = this.setstate.bind(this);
     this.handleCartInc = this.handleCartInc.bind(this);
     this.handleCartDec = this.handleCartDec.bind(this);
   }
-  
+
   componentDidMount() {
     if (this.state.logged_in) {
-      fetch('http://localhost:8000/login/current_user/', {
-        headers: {
-          Authorization: `JWT ${localStorage.getItem('token')}`
-        }
-      })
-        .then(res => res.json())
+      axiosInstance.get('/login/current_user/')
+        .then(res => res.data)
         .then(json => {
           this.setState({ username: json.username, cart:json.cart });
         })
@@ -53,46 +47,49 @@ class App extends Component {
     }
   }
 
-  handle_login = (e, username, password) => {
-    e.preventDefault();
-    let data = {
-      "username" : username,
-      "password" : password,
-    }
-    axios.post('http://localhost:8000/token-auth/', data)
-      // .then(res => res.json())
-      .then(json => {
-        localStorage.setItem('token', json.data.token);
-        this.setState({
-          logged_in: true,
-          username: json.data.user.username
-        });
-        window.location.href='/'
-      })
-      // .then(window.location.href='/')
-      .catch(err => console.log(err));
-  };
+  // handle_login = (e, username, password) => {
+  //   e.preventDefault();
+  //   let data = {
+  //     "username" : username,
+  //     "password" : password,
+  //   }
+  //   request.post('/token-auth/', data)
+  //     .then(res => {
+  //       localStorage.setItem('token', res.data.token);
+  //       this.setState({
+  //         logged_in: true,
+  //         username: res.data.user.username
+  //       });
+  //     })
+  //     .then(res => window.location.href='/')
+  //     .catch(err => console.log(err));
+  // };
 
+  setstate = (boolean, username) => {
+    this.setState({
+      logged_in: boolean,
+      username: username
+    });
+  }
 
-  handle_signup = (e, firstName, lastName, email, username, password) => {
-    e.preventDefault();
-    let data = {
-      "first_name" : firstName,
-      "last_name" : lastName,
-      "username" : email,
-      "password" : password,
-    }
-    axios.post('http://localhost:8000/login/users/', data)
-      // .then(res => res.json())
-      .then(json => {
-        localStorage.setItem('token', json.token);
-        this.setState({
-          logged_in: true,
-          username: json.username
-        });
-        window.location.href='/'
-      });
-  };
+  // handle_signup = (e, firstName, lastName, email, username, password) => {
+  //   e.preventDefault();
+  //   let data = {
+  //     "first_name" : firstName,
+  //     "last_name" : lastName,
+  //     "username" : email,
+  //     "password" : password,
+  //   }
+  //   request.post('/login/users/', data)
+  //     .then(json => {
+  //       localStorage.setItem('token', json.token);
+  //       this.setState({
+  //         logged_in: true,
+  //         username: json.username,
+  //       });
+  //     })
+  //     .then(res => window.location.href='/')
+  // };
 
   handle_logout = () => {
     localStorage.removeItem('token');
@@ -114,14 +111,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
       <Router basename='/' >
       {/* { this.state.location && <NavBarComp1 /> } */}
       {/* <NavBarComp1 /> */}
         {/* <Switch> */} 
           <ScrollToTop />
           <Route 
-            path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} 
+            path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/signin','/signup']} 
             exact 
             render={(props) => <NavBarComp1 logged_in={this.state.logged_in} handle_logout={this.handle_logout} cart={this.state.cart}/>}
           />
@@ -132,17 +128,16 @@ class App extends Component {
           <Route path="/contact" exact component={Contact} />
           <Route path="/cart" exact render={(props) => <Cart handleCartDec={this.handleCartDec} />} />
           <Route path="/product/:pid" exact render={(props) => <ProductPage logged_in={this.state.logged_in} handleCartInc={this.handleCartInc} />} />
-          <Route path='/login' exact render={(props) => <SignIn handle_login={this.handle_login} />} /> 
-          <Route path='/signup' exact render={(props) => <SignUp handle_signup={this.handle_signup} />} /> 
+          <Route path='/login' exact render={(props) => <SignIn setstate={this.setstate} />} /> 
+          <Route path='/signup' exact render={(props) => <SignUp setstate={this.setstate} />} /> 
         {/* </Switch> */}
         <div className="partnerfooter">
         <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={Partners} />
           <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={Footer} />
         </div>
         {/* <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={BackToTopComp1} /> */}
+        <BackTop style={{right:'35px'}} />
       </Router>
-      <BackTop style={{right:'35px'}} />
-      </div>
     )
   }
 }

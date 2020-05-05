@@ -6,7 +6,7 @@ import item3 from '../../img/item-3.jpg'
 import item4 from '../../img/item-4.jpg'
 import '../../index.css'
 import cartLogo from '../../img/shoppingcart.png';
-import axios from 'axios'
+import {request} from '../../helpers'
 import {message} from 'antd'
 import { withRouter } from "react-router";
 import {axiosInstance} from '../../helpers';
@@ -25,7 +25,7 @@ function ProductPage(props) {
     const [added, setAdded] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/product/${pid}`)
+        request.get(`/api/product/${pid}`)
           .then(res => setData(res.data))
       },[]);
 
@@ -52,7 +52,7 @@ function ProductPage(props) {
         // setTimeout(function(){ 
             axiosInstance.post(`/api/add-to-cart/${pid}_${btnValue}/`)
             .then(res => {
-                if(res.created) {
+                if(res.data.created) {
                 props.handleCartInc()
                 }
             })

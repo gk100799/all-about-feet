@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 // import FormControlLabel from '@material-ui/core/FormControlLabel';
 // import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -13,7 +13,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import PropTypes from 'prop-types';
-
+import {axiosInstance, request} from '../../helpers'
+import {withRouter} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -41,11 +42,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SignUp(props) {
+function SignUp(props) {
   const classes = useStyles();
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
@@ -55,8 +55,23 @@ export default function SignUp(props) {
     name === "username" ? setUsername(value) : 
     name === "password" ? setPassword(value) : 
     name === "firstName" ? setFirstName(value) :
-    name === "lastName" ? setLastName(value) :
-    setEmail(value)  
+    setLastName(value)  
+  };
+
+  const handle_signup = (e) => {
+    e.preventDefault();
+    let data = {
+      "first_name" : firstName,
+      "last_name" : lastName,
+      "username" : username,
+      "password" : password,
+    }
+    request.post('/login/users/', data)
+      .then(json => {
+        localStorage.setItem('token', json.data.token);
+        props.setstate(true,json.data.username)
+      })
+      .then(res => window.location.href='/')
   };
 
   return (
@@ -104,10 +119,10 @@ export default function SignUp(props) {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                {...email}
+                label="Username"
+                name="username"
+                autoComplete="username"
+                {...username}
                 onChange={handle_change}
               />
             </Grid>
@@ -132,13 +147,13 @@ export default function SignUp(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={e => props.handle_signup(e, firstName, lastName, email, username, password)}
+            onClick={e => handle_signup(e)}
           >
             Sign Up
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link className={classes.linkTag} onClick={()=>props.toLogin()} variant="body2">
+              <Link className={classes.linkTag} to='login' variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>
@@ -155,3 +170,5 @@ export default function SignUp(props) {
 SignUp.propTypes = {
   handle_signup: PropTypes.func.isRequired
 };
+
+export default withRouter(SignUp);
