@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e2a6756820d787e7de97722976462132",
+    "revision": "92fe83ae5bdb6297518ab3115af9eef9",
     "url": "/all-about-feet/index.html"
   },
   {
-    "revision": "6728a3f0bc7139ad7d70",
+    "revision": "71015986ea0e104a6496",
     "url": "/all-about-feet/static/css/2.51de6d05.chunk.css"
   },
   {
-    "revision": "a8a6641b4296025f5e7b",
-    "url": "/all-about-feet/static/css/main.e003288c.chunk.css"
+    "revision": "7ccfbd5e9d5933141eda",
+    "url": "/all-about-feet/static/css/main.a30f4d45.chunk.css"
   },
   {
-    "revision": "6728a3f0bc7139ad7d70",
-    "url": "/all-about-feet/static/js/2.db95beaa.chunk.js"
+    "revision": "71015986ea0e104a6496",
+    "url": "/all-about-feet/static/js/2.166313cf.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/all-about-feet/static/js/2.db95beaa.chunk.js.LICENSE.txt"
+    "url": "/all-about-feet/static/js/2.166313cf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a8a6641b4296025f5e7b",
-    "url": "/all-about-feet/static/js/main.9c8e7b9c.chunk.js"
+    "revision": "7ccfbd5e9d5933141eda",
+    "url": "/all-about-feet/static/js/main.e1260a81.chunk.js"
   },
   {
     "revision": "4d22e20aba3cad137e5c",
@@ -50,6 +50,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c8a94cc550cbf96832351f2b8cbcec86",
     "url": "/all-about-feet/static/media/brand-5.c8a94cc5.jpg"
+  },
+  {
+    "revision": "c39c4d899c40cfb88fa7b41178dda30e",
+    "url": "/all-about-feet/static/media/carousel1.c39c4d89.jpg"
+  },
+  {
+    "revision": "b3ca7dc6df7875628fd248f948bd0718",
+    "url": "/all-about-feet/static/media/carousel2.b3ca7dc6.jpg"
+  },
+  {
+    "revision": "355f9278fb3521a4050d83f4e71e8deb",
+    "url": "/all-about-feet/static/media/carousel3.355f9278.jpg"
   },
   {
     "revision": "487e5009dbe3ebaae772273c52eb0b58",
@@ -192,6 +204,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/all-about-feet/static/media/lookbok.c4ba209b.jpg"
   },
   {
+    "revision": "99cb7256fb3f5df48c3bbd3e23afe4ce",
+    "url": "/all-about-feet/static/media/men-poster.99cb7256.jpg"
+  },
+  {
+    "revision": "f0a910f0bb9bbff184eb9252cef14f24",
+    "url": "/all-about-feet/static/media/men-poster1.f0a910f0.jpg"
+  },
+  {
     "revision": "36bc06367e8c5f0bc93965891770d629",
     "url": "/all-about-feet/static/media/men.36bc0636.jpg"
   },
@@ -218,6 +238,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4e4cb6a802affe0fe4b42899fd82f3d8",
     "url": "/all-about-feet/static/media/supermarket.4e4cb6a8.svg"
+  },
+  {
+    "revision": "7ffb1d6ae29869ffd7fe422bf6e10e7d",
+    "url": "/all-about-feet/static/media/women-poster.7ffb1d6a.jpg"
   },
   {
     "revision": "e67859ed63b3573ca35d1fa1396e194c",
