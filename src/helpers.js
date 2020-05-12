@@ -4,7 +4,7 @@ export const backendURL = "http://localhost:8000";
 
 export const request = axios.create({
   baseURL: backendURL,
-  timeout: 10000
+  // timeout: 10000
 });
 
 export const axiosInstance = axios.create({
@@ -13,7 +13,7 @@ export const axiosInstance = axios.create({
     "Content-Type": "application/json",
     "Authorization": `JWT ${localStorage.getItem('token')}`
   },
-  timeout: 10000
+  // timeout: 10000
 });
 
 export const axiosInstanceFormData = axios.create({
