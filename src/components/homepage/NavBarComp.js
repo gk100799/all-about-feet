@@ -24,11 +24,11 @@ class NavBarComp extends Component {
         Lshow : false,
         Sshow : false,
         activeTab : 
-          window.location.pathname === '/' ? '' : 
-          window.location.pathname === '/men' ? 'men' :
-          window.location.pathname === '/women' ? 'women' :
-          window.location.pathname === '/about' ? 'about' :
-          window.location.pathname === '/about' ? 'contact' : 'none',
+          window.location.hash === '/' ? '' : 
+          window.location.hash === '/men' ? 'men' :
+          window.location.hash === '/women' ? 'women' :
+          window.location.hash === '/about' ? 'about' :
+          window.location.hash === '/contact' ? 'contact' : 'none',
       }
       this.handleLClose = this.handleLClose.bind(this);
       this.handleLShow = this.handleLShow.bind(this);

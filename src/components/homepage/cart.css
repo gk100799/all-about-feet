@@ -1,0 +1,17 @@
+.ant-col-8 {
+    flex: 0 0 10% !important;
+  }
+
+.formClass {
+    margin: 50px 0px 0px 80px;
+    /* justify-self:center; */
+}
+
+#nest-messages {
+    /* align-self: center !important; */
+}
+
+/* .ant-form-item-label {
+    width:10px !important;
+    flex:none
+} */

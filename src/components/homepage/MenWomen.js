@@ -12,7 +12,7 @@ function MenWomen() {
 					<div><a style={{color:"black",textAlign:"center"}}><Link to='/men' className="linkTag"><h2 className="h2MenWomen" style={{paddingTop:'25px'}}>Shop Men's Collection</h2></Link></a></div>
 				</div>
 				<div className="column">
-					<a href="/women" className="boxMenWomen" style={{}}><Link to='/women' className="linkTag"><img style={{}} className="imgMW" src={womenImg}/></Link></a>
+					<a className="boxMenWomen" style={{}}><Link to='/women' className="linkTag"><img style={{}} className="imgMW" src={womenImg}/></Link></a>
 					<div><a style={{color:"black",textAlign:"center"}}><Link to='/women' className="linkTag"><h2 className="h2MenWomen" style={{paddingTop:'25px'}}>Shop Women's Collection</h2></Link></a></div>
 				</div>
 			</div>

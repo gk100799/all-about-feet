@@ -1,7 +1,7 @@
 import React from 'react'
-import slider_1 from '../../img/img_bg_1.jpg'
-import slider_2 from '../../img/img_bg_2.jpg'
-import slider_3 from '../../img/img_bg_3.jpg'
+import slider_1 from '../../img/carousel2.jpg'
+import slider_2 from '../../img/carousel3.jpg'
+import slider_3 from '../../img/carousel1.jpg'
 import {Carousel} from 'react-bootstrap';
 import '../../index.css'
 

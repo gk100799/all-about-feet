@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom';
 
 function Product(props) {
     const product = {...props.product}
-
+    const images = require.context('../../img', true);
     return (
         <div >
             <Link to={`product/${product.pid}`}>
                 <Card className="productSingle" style={{  }}>
-                <div className="cardImg1"><Card.Img className='cardImg' variant="top" src={men} /></div>
+                <div className="cardImg1"><Card.Img className='cardImg' variant="top" src={require(`../../img/${product.imagename}.jpg`)} /></div>
                 <Card.Body className="cardBody" style={{color: 'black'}}>
                     <div className='productName'> {product.pname} </div>
                     <div className='productPrice' style={{}}>${product.price}.00</div>

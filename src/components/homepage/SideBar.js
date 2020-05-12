@@ -93,7 +93,8 @@ export default function SideBar() {
             <div className='rightBar'>
 				<ScaleLoader
                     css={override}
-                    size={150}
+                    height={60}
+                    width={5}
                     color={"#123abc"}
                     loading={loading}
                 />

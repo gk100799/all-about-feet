@@ -15,8 +15,7 @@ function HomeProducts(props){
     
 
     return (
-        // <div className='productsClass' style={{display:'flex',flexWrap: 'wrap',justifyContent: 'space-around',alignContent: 'flex-start'}}>
-        <div className='productsClass' style={{}}>
+        <div className='homeProductsClass' style={{}}>
             { products && products.map((product, index) => (
                 // <Product pid={product.pid} pname={product.pname} price={product.price} />
                 <Product product={product} {...props} />

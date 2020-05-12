@@ -12,6 +12,8 @@ import { withRouter } from "react-router";
 import {axiosInstance} from '../../helpers';
 import { Button } from 'antd';
 import { Select } from 'antd';
+import {ScaleLoader} from 'react-spinners'
+import { css } from "@emotion/core";
 
 const { Option } = Select;
 
@@ -22,12 +24,26 @@ function ProductPage(props) {
     const { pid } = props.match.params
     const [btnValue, setBtnValue] = useState(1)
     const [loading,setLoading] = useState(false)
+    const [mainLoading, setMainLoading] = useState(true)
     const [added, setAdded] = useState(false)
+    const images = require.context('../../img', true);
+    const [size, setSize] = useState(null)
+
+    const override = css`
+        padding-top: 50px;
+        text-align: center;
+        align-items: center;
+    `;
 
     useEffect(() => {
         request.get(`/api/product/${pid}`)
           .then(res => setData(res.data))
+          .then(res => setMainLoading(false))
       },[]);
+
+    const handleChange = (value) => {
+        setSize(value)
+    }
 
     const updateBtnValuePlus = () => {
         setBtnValue(prevBtnValue => prevBtnValue + 1 )
@@ -48,23 +64,24 @@ function ProductPage(props) {
     }
 
     const addToCart = () => {
+        if (size == null){
+            message.error("Please select a size")
+        } else {
         setLoading(true)
-        // setTimeout(function(){ 
-            axiosInstance.post(`/api/add-to-cart/${pid}_${btnValue}/`)
+            axiosInstance.post(`/api/add-to-cart/${pid}_${btnValue}_${size}/`)
             .then(res => {
-                if(res.data.created) {
+                if(res.data.created === "true") {
                 props.handleCartInc()
                 }
             })
             .then(res => setLoading(false))
             .then(res => setAdded(true))
-            .then(res => message.success('added to cart'))
+            .then(res => message.success('added to cart', 2))
             .catch(err => {
                 message.error('Please try again');
                 setLoading(false);
             })
-        //  }, 1000);
-        // console.log(result)
+        }
     }
 
     const handleClick = () => {
@@ -76,13 +93,26 @@ function ProductPage(props) {
     }
 
     return (
+        <div>
+            {mainLoading && 
+                <div style={{paddingTop: '100px',height:'582px'}}>
+                    <ScaleLoader
+                        css={override}
+                        height={50}
+                        width={5}
+                        color={"#123abc"}
+                        loading={mainLoading}
+                    />
+                </div>
+            }
+        { !mainLoading && 
         <div className='productPage' style={{margin:'50px 80px'}}>
             <div className='carouselProduct'>
                 <Carousel>
                     <Carousel.Item>
                         <img
                         className="d-block"
-                        src={item1}
+                        src={require(`../../img/${data.imagename}.jpg`)}
                         alt="First slide"
                         />
                     </Carousel.Item>
@@ -122,7 +152,7 @@ function ProductPage(props) {
 
                 <div style={{ padding: '20px 0px', alignItems:'center'}}>
                     <h6 style={{paddingLeft:'0px', alignSelf:'center'}}>SIZE</h6>
-                    <Select style={{ width: 70, margin: '5px 0px 10px 2px' }} allowClear>
+                    <Select style={{ width: 60, margin: '5px 0px 10px 2px' }} onChange={handleChange} >
                         {allSizes.map((item,index) => (
                             <Option value={item}>{item}</Option>
                         ))}
@@ -145,6 +175,8 @@ function ProductPage(props) {
                     <Button loading={loading} className="buttonClass2" onClick={added ? goToCart :handleClick}><i><img style={{padding:'0px 10px 4px 0px'}}src={cartLogo} alt="" /></i>{added ? `Go to Cart` : `Add to Cart`}</Button>
                 </div>
             </div>
+        </div>
+        }
         </div>
     )
 }

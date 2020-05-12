@@ -47,49 +47,12 @@ class App extends Component {
     }
   }
 
-  // handle_login = (e, username, password) => {
-  //   e.preventDefault();
-  //   let data = {
-  //     "username" : username,
-  //     "password" : password,
-  //   }
-  //   request.post('/token-auth/', data)
-  //     .then(res => {
-  //       localStorage.setItem('token', res.data.token);
-  //       this.setState({
-  //         logged_in: true,
-  //         username: res.data.user.username
-  //       });
-  //     })
-  //     .then(res => window.location.href='/')
-  //     .catch(err => console.log(err));
-  // };
-
   setstate = (boolean, username) => {
     this.setState({
       logged_in: boolean,
       username: username
     });
   }
-
-  // handle_signup = (e, firstName, lastName, email, username, password) => {
-  //   e.preventDefault();
-  //   let data = {
-  //     "first_name" : firstName,
-  //     "last_name" : lastName,
-  //     "username" : email,
-  //     "password" : password,
-  //   }
-  //   request.post('/login/users/', data)
-  //     .then(json => {
-  //       localStorage.setItem('token', json.token);
-  //       this.setState({
-  //         logged_in: true,
-  //         username: json.username,
-  //       });
-  //     })
-  //     .then(res => window.location.href='/')
-  // };
 
   handle_logout = () => {
     localStorage.removeItem('token');
@@ -103,9 +66,9 @@ class App extends Component {
   }
 
   handleCartDec = () => {
-    this.setState(prevState => ({
-      cart : prevState - 1,
-    }))
+    this.setState({
+      cart : this.state.cart - 1,
+    })
   }
 
 

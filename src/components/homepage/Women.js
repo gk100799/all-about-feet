@@ -1,6 +1,6 @@
 import React from 'react'
-import Poster from './Poster'
-import Blocks from './Blocks'
+import Poster from './posterWomen'
+import Blocks from './BlocksWomen'
 import SideBar from './SideBar'
 
 export default function Women() {
@@ -8,7 +8,7 @@ export default function Women() {
         <div>
             <div className='menPage' style={{}}>
                 <Poster name="WOMEN'S"/>
-                <Blocks />
+                {/* <Blocks /> */}
                 <SideBar />
             </div>
         </div>
