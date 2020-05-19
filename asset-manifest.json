@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/all-about-feet/static/css/main.a30f4d45.chunk.css",
-    "main.js": "/all-about-feet/static/js/main.e4179da8.chunk.js",
-    "main.js.map": "/all-about-feet/static/js/main.e4179da8.chunk.js.map",
+    "main.js": "/all-about-feet/static/js/main.c206570e.chunk.js",
+    "main.js.map": "/all-about-feet/static/js/main.c206570e.chunk.js.map",
     "runtime-main.js": "/all-about-feet/static/js/runtime-main.63eb5428.js",
     "runtime-main.js.map": "/all-about-feet/static/js/runtime-main.63eb5428.js.map",
     "static/css/2.51de6d05.chunk.css": "/all-about-feet/static/css/2.51de6d05.chunk.css",
-    "static/js/2.166313cf.chunk.js": "/all-about-feet/static/js/2.166313cf.chunk.js",
-    "static/js/2.166313cf.chunk.js.map": "/all-about-feet/static/js/2.166313cf.chunk.js.map",
+    "static/js/2.83545ccb.chunk.js": "/all-about-feet/static/js/2.83545ccb.chunk.js",
+    "static/js/2.83545ccb.chunk.js.map": "/all-about-feet/static/js/2.83545ccb.chunk.js.map",
     "index.html": "/all-about-feet/index.html",
-    "precache-manifest.b2b370e3da6a3690178912438d730c4b.js": "/all-about-feet/precache-manifest.b2b370e3da6a3690178912438d730c4b.js",
+    "precache-manifest.2be1794a5eb95ffbc6b5e0829955d349.js": "/all-about-feet/precache-manifest.2be1794a5eb95ffbc6b5e0829955d349.js",
     "service-worker.js": "/all-about-feet/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/all-about-feet/static/css/2.51de6d05.chunk.css.map",
     "static/css/main.a30f4d45.chunk.css.map": "/all-about-feet/static/css/main.a30f4d45.chunk.css.map",
-    "static/js/2.166313cf.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.166313cf.chunk.js.LICENSE.txt",
+    "static/js/2.83545ccb.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.83545ccb.chunk.js.LICENSE.txt",
     "static/media/add.jpg": "/all-about-feet/static/media/add.0a4228af.jpg",
     "static/media/brand-1.jpg": "/all-about-feet/static/media/brand-1.1d62e6a4.jpg",
     "static/media/brand-2.jpg": "/all-about-feet/static/media/brand-2.3dc613cb.jpg",
@@ -73,8 +73,8 @@
   "entrypoints": [
     "static/js/runtime-main.63eb5428.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.166313cf.chunk.js",
+    "static/js/2.83545ccb.chunk.js",
     "static/css/main.a30f4d45.chunk.css",
-    "static/js/main.e4179da8.chunk.js"
+    "static/js/main.c206570e.chunk.js"
   ]
 }
