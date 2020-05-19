@@ -84,7 +84,7 @@ class App extends Component {
         {/* <Switch> */} 
           <ScrollToTop />
           <Route 
-            path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/signin','/signup']} 
+            path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/login','/signup']} 
             exact 
             render={(props) => <NavBarComp1 logged_in={this.state.logged_in} handle_logout={this.handle_logout} cart={this.state.cart}/>}
           />
