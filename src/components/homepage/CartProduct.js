@@ -31,6 +31,9 @@ export default function CartProduct(props) {
         });
     }
 
+    message.config({
+        top: 80,
+    })
 
     useEffect(() => {
         if (btnValue === null) {

@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import PropTypes from 'prop-types';
 import {axiosInstance, request} from '../../helpers'
 import {withRouter} from 'react-router-dom'
+import {message} from 'antd';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -52,6 +53,10 @@ function SignIn(props) {
     const value = e.target.value;
     name === "username" ? setUsername(value) : setPassword(value)
   };
+
+  message.config({
+    top: 80,
+  })
 
   const handle_login = (e) => {
     e.preventDefault();

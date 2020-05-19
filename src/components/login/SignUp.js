@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import PropTypes from 'prop-types';
 import {axiosInstance, request} from '../../helpers'
 import {withRouter} from 'react-router-dom'
+import {message} from 'antd';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -57,6 +58,10 @@ function SignUp(props) {
     name === "firstName" ? setFirstName(value) :
     setLastName(value)  
   };
+
+  message.config({
+    top: 80,
+  })
 
   const handle_signup = (e) => {
     e.preventDefault();

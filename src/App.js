@@ -14,7 +14,7 @@ import './fonts/fonts.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/homepage/Footer.css'
 import 'antd/dist/antd.css';
-import { BackTop } from 'antd';
+import { BackTop, message } from 'antd';
 import SignIn from './components/login/SignIn';
 import SignUp from './components/login/SignUp';
 import ScrollToTop from './components/homepage/ScrollToTop'
@@ -55,8 +55,12 @@ class App extends Component {
   }
 
   handle_logout = () => {
+    message.config({
+      top: 80,
+    })
     localStorage.removeItem('token');
     this.setState({ logged_in: false, username: '' });
+    message.success("Logout Successful!")
   };
 
   handleCartInc = () => {
