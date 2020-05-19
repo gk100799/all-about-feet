@@ -65,7 +65,8 @@ function SignIn(props) {
         props.setstate(true, res.data.user.username)
       })
       .then(res => window.location.href='/')
-      .catch(err => console.log(err));
+      .then(res=> message.success("Logged in successfully!"))
+      .catch(err => message.error("Invalid Credentials"));
   };
 
   return (
