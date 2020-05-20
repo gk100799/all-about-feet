@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2de8efc2ab2436f37e177c842f2dcac1",
+    "revision": "f3d31b20edd22f7e8caebb1f69df9e9d",
     "url": "/all-about-feet/index.html"
   },
   {
-    "revision": "f2cf4c51442394a44ba5",
+    "revision": "3e36b8ba4d535669f27a",
     "url": "/all-about-feet/static/css/2.51de6d05.chunk.css"
   },
   {
-    "revision": "9f0cadf2d2e9f9e2e585",
-    "url": "/all-about-feet/static/css/main.23d0cbcf.chunk.css"
+    "revision": "e11a33fef86e84a27320",
+    "url": "/all-about-feet/static/css/main.382eb371.chunk.css"
   },
   {
-    "revision": "f2cf4c51442394a44ba5",
-    "url": "/all-about-feet/static/js/2.71002b72.chunk.js"
+    "revision": "3e36b8ba4d535669f27a",
+    "url": "/all-about-feet/static/js/2.1f2531f8.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/all-about-feet/static/js/2.71002b72.chunk.js.LICENSE.txt"
+    "url": "/all-about-feet/static/js/2.1f2531f8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9f0cadf2d2e9f9e2e585",
-    "url": "/all-about-feet/static/js/main.403de6c0.chunk.js"
+    "revision": "e11a33fef86e84a27320",
+    "url": "/all-about-feet/static/js/main.28a0124e.chunk.js"
   },
   {
     "revision": "4d22e20aba3cad137e5c",
@@ -64,6 +64,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/all-about-feet/static/media/air-max-tailwind-iv-se-shoe-vHzrtK.513528e2.jpg"
   },
   {
+    "revision": "c3d753351f78c3f6a56a9a4652b161fe",
+    "url": "/all-about-feet/static/media/benassi-jdi-betrue-slide-3VbgVG.c3d75335.jpg"
+  },
+  {
     "revision": "1d62e6a4789f6ca2dad604cc7d284c37",
     "url": "/all-about-feet/static/media/brand-1.1d62e6a4.jpg"
   },
@@ -82,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c8a94cc550cbf96832351f2b8cbcec86",
     "url": "/all-about-feet/static/media/brand-5.c8a94cc5.jpg"
+  },
+  {
+    "revision": "ae08f9267f7b846a23676594e2b59ab7",
+    "url": "/all-about-feet/static/media/canyon-sandal-4D0TT7.ae08f926.jpg"
   },
   {
     "revision": "c39c4d899c40cfb88fa7b41178dda30e",

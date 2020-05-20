@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/all-about-feet/static/css/main.23d0cbcf.chunk.css",
-    "main.js": "/all-about-feet/static/js/main.403de6c0.chunk.js",
-    "main.js.map": "/all-about-feet/static/js/main.403de6c0.chunk.js.map",
+    "main.css": "/all-about-feet/static/css/main.382eb371.chunk.css",
+    "main.js": "/all-about-feet/static/js/main.28a0124e.chunk.js",
+    "main.js.map": "/all-about-feet/static/js/main.28a0124e.chunk.js.map",
     "runtime-main.js": "/all-about-feet/static/js/runtime-main.63eb5428.js",
     "runtime-main.js.map": "/all-about-feet/static/js/runtime-main.63eb5428.js.map",
     "static/css/2.51de6d05.chunk.css": "/all-about-feet/static/css/2.51de6d05.chunk.css",
-    "static/js/2.71002b72.chunk.js": "/all-about-feet/static/js/2.71002b72.chunk.js",
-    "static/js/2.71002b72.chunk.js.map": "/all-about-feet/static/js/2.71002b72.chunk.js.map",
+    "static/js/2.1f2531f8.chunk.js": "/all-about-feet/static/js/2.1f2531f8.chunk.js",
+    "static/js/2.1f2531f8.chunk.js.map": "/all-about-feet/static/js/2.1f2531f8.chunk.js.map",
     "index.html": "/all-about-feet/index.html",
-    "precache-manifest.11bd86c308cea4c59108ab08a151e2ad.js": "/all-about-feet/precache-manifest.11bd86c308cea4c59108ab08a151e2ad.js",
+    "precache-manifest.2ae0b13b9f01f390e64ba519c96da1e1.js": "/all-about-feet/precache-manifest.2ae0b13b9f01f390e64ba519c96da1e1.js",
     "service-worker.js": "/all-about-feet/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/all-about-feet/static/css/2.51de6d05.chunk.css.map",
-    "static/css/main.23d0cbcf.chunk.css.map": "/all-about-feet/static/css/main.23d0cbcf.chunk.css.map",
-    "static/js/2.71002b72.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.71002b72.chunk.js.LICENSE.txt",
+    "static/css/main.382eb371.chunk.css.map": "/all-about-feet/static/css/main.382eb371.chunk.css.map",
+    "static/js/2.1f2531f8.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.1f2531f8.chunk.js.LICENSE.txt",
     "static/media/add.jpg": "/all-about-feet/static/media/add.0a4228af.jpg",
     "static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.jpg": "/all-about-feet/static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.7219c18c.jpg",
     "static/media/air-max-270-react-se-shoe-2zP3xD (1).jpg": "/all-about-feet/static/media/air-max-270-react-se-shoe-2zP3xD (1).b9034664.jpg",
@@ -23,11 +23,13 @@
     "static/media/air-max-720-se-shoe-gt8fV7 (1).jpg": "/all-about-feet/static/media/air-max-720-se-shoe-gt8fV7 (1).c4f23445.jpg",
     "static/media/air-max-720-se-shoe-gt8fV7.jpg": "/all-about-feet/static/media/air-max-720-se-shoe-gt8fV7.30655f58.jpg",
     "static/media/air-max-tailwind-iv-se-shoe-vHzrtK.jpg": "/all-about-feet/static/media/air-max-tailwind-iv-se-shoe-vHzrtK.513528e2.jpg",
+    "static/media/benassi-jdi-betrue-slide-3VbgVG.jpg": "/all-about-feet/static/media/benassi-jdi-betrue-slide-3VbgVG.c3d75335.jpg",
     "static/media/brand-1.jpg": "/all-about-feet/static/media/brand-1.1d62e6a4.jpg",
     "static/media/brand-2.jpg": "/all-about-feet/static/media/brand-2.3dc613cb.jpg",
     "static/media/brand-3.jpg": "/all-about-feet/static/media/brand-3.1cc7855b.jpg",
     "static/media/brand-4.jpg": "/all-about-feet/static/media/brand-4.85f988ae.jpg",
     "static/media/brand-5.jpg": "/all-about-feet/static/media/brand-5.c8a94cc5.jpg",
+    "static/media/canyon-sandal-4D0TT7.jpg": "/all-about-feet/static/media/canyon-sandal-4D0TT7.ae08f926.jpg",
     "static/media/carousel1.jpg": "/all-about-feet/static/media/carousel1.c39c4d89.jpg",
     "static/media/carousel2.jpg": "/all-about-feet/static/media/carousel2.b3ca7dc6.jpg",
     "static/media/carousel3.jpg": "/all-about-feet/static/media/carousel3.355f9278.jpg",
@@ -82,8 +84,8 @@
   "entrypoints": [
     "static/js/runtime-main.63eb5428.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.71002b72.chunk.js",
-    "static/css/main.23d0cbcf.chunk.css",
-    "static/js/main.403de6c0.chunk.js"
+    "static/js/2.1f2531f8.chunk.js",
+    "static/css/main.382eb371.chunk.css",
+    "static/js/main.28a0124e.chunk.js"
   ]
 }
