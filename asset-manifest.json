@@ -1,19 +1,28 @@
 {
   "files": {
     "main.css": "/all-about-feet/static/css/main.382eb371.chunk.css",
-    "main.js": "/all-about-feet/static/js/main.28a0124e.chunk.js",
-    "main.js.map": "/all-about-feet/static/js/main.28a0124e.chunk.js.map",
+    "main.js": "/all-about-feet/static/js/main.6f92d2ae.chunk.js",
+    "main.js.map": "/all-about-feet/static/js/main.6f92d2ae.chunk.js.map",
     "runtime-main.js": "/all-about-feet/static/js/runtime-main.63eb5428.js",
     "runtime-main.js.map": "/all-about-feet/static/js/runtime-main.63eb5428.js.map",
     "static/css/2.51de6d05.chunk.css": "/all-about-feet/static/css/2.51de6d05.chunk.css",
-    "static/js/2.1f2531f8.chunk.js": "/all-about-feet/static/js/2.1f2531f8.chunk.js",
-    "static/js/2.1f2531f8.chunk.js.map": "/all-about-feet/static/js/2.1f2531f8.chunk.js.map",
+    "static/js/2.2c3ed274.chunk.js": "/all-about-feet/static/js/2.2c3ed274.chunk.js",
+    "static/js/2.2c3ed274.chunk.js.map": "/all-about-feet/static/js/2.2c3ed274.chunk.js.map",
     "index.html": "/all-about-feet/index.html",
-    "precache-manifest.2ae0b13b9f01f390e64ba519c96da1e1.js": "/all-about-feet/precache-manifest.2ae0b13b9f01f390e64ba519c96da1e1.js",
+    "precache-manifest.ba0da34c9acf25b28fc8b27b4eae7047.js": "/all-about-feet/precache-manifest.ba0da34c9acf25b28fc8b27b4eae7047.js",
     "service-worker.js": "/all-about-feet/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/all-about-feet/static/css/2.51de6d05.chunk.css.map",
     "static/css/main.382eb371.chunk.css.map": "/all-about-feet/static/css/main.382eb371.chunk.css.map",
-    "static/js/2.1f2531f8.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.1f2531f8.chunk.js.LICENSE.txt",
+    "static/js/2.2c3ed274.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.2c3ed274.chunk.js.LICENSE.txt",
+    "static/media/204106_BRN.jpg": "/all-about-feet/static/media/204106_BRN.773af45f.jpg",
+    "static/media/54460_BBK.jpg": "/all-about-feet/static/media/54460_BBK.06857971.jpg",
+    "static/media/575399_D60D0_9070_002_100_0000_Light.jpg": "/all-about-feet/static/media/575399_D60D0_9070_002_100_0000_Light.1d4bb7bd.jpg",
+    "static/media/592861_DTN50_1000_002_100_0000_Light.jpg": "/all-about-feet/static/media/592861_DTN50_1000_002_100_0000_Light.23dcb78e.jpg",
+    "static/media/606111_H8O10_8465_002_100_0000_Light.jpg": "/all-about-feet/static/media/606111_H8O10_8465_002_100_0000_Light.529bd4db.jpg",
+    "static/media/MRLM-J000137-051319-S20-032.jpg": "/all-about-feet/static/media/MRLM-J000137-051319-S20-032.3ba1525f.jpg",
+    "static/media/MRLM-J034367-091619-S20-HERO.jpg": "/all-about-feet/static/media/MRLM-J034367-091619-S20-HERO.fea40715.jpg",
+    "static/media/Men_CORE_RUNNING_SHOES_LOW_CL7598_1.jpg": "/all-about-feet/static/media/Men_CORE_RUNNING_SHOES_LOW_CL7598_1.c13a29a0.jpg",
+    "static/media/Men_OUTDOOR_SANDALS_CL9946_1.jpg": "/all-about-feet/static/media/Men_OUTDOOR_SANDALS_CL9946_1.9e8726c2.jpg",
     "static/media/add.jpg": "/all-about-feet/static/media/add.0a4228af.jpg",
     "static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.jpg": "/all-about-feet/static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.7219c18c.jpg",
     "static/media/air-max-270-react-se-shoe-2zP3xD (1).jpg": "/all-about-feet/static/media/air-max-270-react-se-shoe-2zP3xD (1).b9034664.jpg",
@@ -72,6 +81,7 @@
     "static/media/men-poster1.jpg": "/all-about-feet/static/media/men-poster1.f0a910f0.jpg",
     "static/media/men.jpg": "/all-about-feet/static/media/men.36bc0636.jpg",
     "static/media/mx-720-818-shoe-s6Cxx2.jpg": "/all-about-feet/static/media/mx-720-818-shoe-s6Cxx2.f714d857.jpg",
+    "static/media/owaysis-sandal-81lstS.jpg": "/all-about-feet/static/media/owaysis-sandal-81lstS.bf434ee8.jpg",
     "static/media/product-1.jpg": "/all-about-feet/static/media/product-1.1856a381.jpg",
     "static/media/slider-1.jpg": "/all-about-feet/static/media/slider-1.1bc5e3bf.jpg",
     "static/media/slider-2.jpg": "/all-about-feet/static/media/slider-2.b28a3892.jpg",
@@ -84,8 +94,8 @@
   "entrypoints": [
     "static/js/runtime-main.63eb5428.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.1f2531f8.chunk.js",
+    "static/js/2.2c3ed274.chunk.js",
     "static/css/main.382eb371.chunk.css",
-    "static/js/main.28a0124e.chunk.js"
+    "static/js/main.6f92d2ae.chunk.js"
   ]
 }
