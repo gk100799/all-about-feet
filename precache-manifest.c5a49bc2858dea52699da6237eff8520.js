@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d9ef1e00d0938e7a359d080c31e7c597",
+    "revision": "87f4b485a808b6c1b928880516647c8e",
     "url": "/all-about-feet/index.html"
   },
   {
-    "revision": "7973b7b484574131538b",
+    "revision": "f2cf4c51442394a44ba5",
     "url": "/all-about-feet/static/css/2.51de6d05.chunk.css"
   },
   {
-    "revision": "581dc4055201be7b251f",
+    "revision": "8a5a040da1047f0b3c22",
     "url": "/all-about-feet/static/css/main.23d0cbcf.chunk.css"
   },
   {
-    "revision": "7973b7b484574131538b",
-    "url": "/all-about-feet/static/js/2.83545ccb.chunk.js"
+    "revision": "f2cf4c51442394a44ba5",
+    "url": "/all-about-feet/static/js/2.71002b72.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/all-about-feet/static/js/2.83545ccb.chunk.js.LICENSE.txt"
+    "url": "/all-about-feet/static/js/2.71002b72.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "581dc4055201be7b251f",
-    "url": "/all-about-feet/static/js/main.63571562.chunk.js"
+    "revision": "8a5a040da1047f0b3c22",
+    "url": "/all-about-feet/static/js/main.14339a37.chunk.js"
   },
   {
     "revision": "4d22e20aba3cad137e5c",
@@ -30,6 +30,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0a4228af24b2a5c3b0a12f0fc35619cf",
     "url": "/all-about-feet/static/media/add.0a4228af.jpg"
+  },
+  {
+    "revision": "7219c18cff04bad8d848579e48a7f471",
+    "url": "/all-about-feet/static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.7219c18c.jpg"
+  },
+  {
+    "revision": "b903466455db302d5fb5cbe7929b88e4",
+    "url": "/all-about-feet/static/media/air-max-270-react-se-shoe-2zP3xD (1).b9034664.jpg"
+  },
+  {
+    "revision": "0e474118ec483b24be7362ac838871bb",
+    "url": "/all-about-feet/static/media/air-max-270-react-se-shoe-2zP3xD.0e474118.jpg"
+  },
+  {
+    "revision": "c9d22ddeb244c4326b747cb7c5e2ed7f",
+    "url": "/all-about-feet/static/media/air-max-270-react-se-shoe-tsRhSL (1).c9d22dde.jpg"
+  },
+  {
+    "revision": "7965504edb664609ecc42e47d870ea15",
+    "url": "/all-about-feet/static/media/air-max-270-react-se-shoe-tsRhSL.7965504e.jpg"
+  },
+  {
+    "revision": "c4f234454b276c41d418344f5085ce1f",
+    "url": "/all-about-feet/static/media/air-max-720-se-shoe-gt8fV7 (1).c4f23445.jpg"
+  },
+  {
+    "revision": "30655f586f0af49c38fcf421d68c6050",
+    "url": "/all-about-feet/static/media/air-max-720-se-shoe-gt8fV7.30655f58.jpg"
+  },
+  {
+    "revision": "513528e21ef09f260a88e9429c4acb61",
+    "url": "/all-about-feet/static/media/air-max-tailwind-iv-se-shoe-vHzrtK.513528e2.jpg"
   },
   {
     "revision": "1d62e6a4789f6ca2dad604cc7d284c37",
@@ -214,6 +246,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "36bc06367e8c5f0bc93965891770d629",
     "url": "/all-about-feet/static/media/men.36bc0636.jpg"
+  },
+  {
+    "revision": "f714d8579d5f0d768520fe5c4a6a0afd",
+    "url": "/all-about-feet/static/media/mx-720-818-shoe-s6Cxx2.f714d857.jpg"
   },
   {
     "revision": "1856a381f8edacc745001c74355fc8a5",

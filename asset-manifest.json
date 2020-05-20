@@ -1,20 +1,28 @@
 {
   "files": {
     "main.css": "/all-about-feet/static/css/main.23d0cbcf.chunk.css",
-    "main.js": "/all-about-feet/static/js/main.63571562.chunk.js",
-    "main.js.map": "/all-about-feet/static/js/main.63571562.chunk.js.map",
+    "main.js": "/all-about-feet/static/js/main.14339a37.chunk.js",
+    "main.js.map": "/all-about-feet/static/js/main.14339a37.chunk.js.map",
     "runtime-main.js": "/all-about-feet/static/js/runtime-main.63eb5428.js",
     "runtime-main.js.map": "/all-about-feet/static/js/runtime-main.63eb5428.js.map",
     "static/css/2.51de6d05.chunk.css": "/all-about-feet/static/css/2.51de6d05.chunk.css",
-    "static/js/2.83545ccb.chunk.js": "/all-about-feet/static/js/2.83545ccb.chunk.js",
-    "static/js/2.83545ccb.chunk.js.map": "/all-about-feet/static/js/2.83545ccb.chunk.js.map",
+    "static/js/2.71002b72.chunk.js": "/all-about-feet/static/js/2.71002b72.chunk.js",
+    "static/js/2.71002b72.chunk.js.map": "/all-about-feet/static/js/2.71002b72.chunk.js.map",
     "index.html": "/all-about-feet/index.html",
-    "precache-manifest.ca89b5900e87a6e056fd064edf3b629f.js": "/all-about-feet/precache-manifest.ca89b5900e87a6e056fd064edf3b629f.js",
+    "precache-manifest.c5a49bc2858dea52699da6237eff8520.js": "/all-about-feet/precache-manifest.c5a49bc2858dea52699da6237eff8520.js",
     "service-worker.js": "/all-about-feet/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/all-about-feet/static/css/2.51de6d05.chunk.css.map",
     "static/css/main.23d0cbcf.chunk.css.map": "/all-about-feet/static/css/main.23d0cbcf.chunk.css.map",
-    "static/js/2.83545ccb.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.83545ccb.chunk.js.LICENSE.txt",
+    "static/js/2.71002b72.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.71002b72.chunk.js.LICENSE.txt",
     "static/media/add.jpg": "/all-about-feet/static/media/add.0a4228af.jpg",
+    "static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.jpg": "/all-about-feet/static/media/air-jordan-xxxiv-low-pf-basketball-shoe-NCqSNv.7219c18c.jpg",
+    "static/media/air-max-270-react-se-shoe-2zP3xD (1).jpg": "/all-about-feet/static/media/air-max-270-react-se-shoe-2zP3xD (1).b9034664.jpg",
+    "static/media/air-max-270-react-se-shoe-2zP3xD.jpg": "/all-about-feet/static/media/air-max-270-react-se-shoe-2zP3xD.0e474118.jpg",
+    "static/media/air-max-270-react-se-shoe-tsRhSL (1).jpg": "/all-about-feet/static/media/air-max-270-react-se-shoe-tsRhSL (1).c9d22dde.jpg",
+    "static/media/air-max-270-react-se-shoe-tsRhSL.jpg": "/all-about-feet/static/media/air-max-270-react-se-shoe-tsRhSL.7965504e.jpg",
+    "static/media/air-max-720-se-shoe-gt8fV7 (1).jpg": "/all-about-feet/static/media/air-max-720-se-shoe-gt8fV7 (1).c4f23445.jpg",
+    "static/media/air-max-720-se-shoe-gt8fV7.jpg": "/all-about-feet/static/media/air-max-720-se-shoe-gt8fV7.30655f58.jpg",
+    "static/media/air-max-tailwind-iv-se-shoe-vHzrtK.jpg": "/all-about-feet/static/media/air-max-tailwind-iv-se-shoe-vHzrtK.513528e2.jpg",
     "static/media/brand-1.jpg": "/all-about-feet/static/media/brand-1.1d62e6a4.jpg",
     "static/media/brand-2.jpg": "/all-about-feet/static/media/brand-2.3dc613cb.jpg",
     "static/media/brand-3.jpg": "/all-about-feet/static/media/brand-3.1cc7855b.jpg",
@@ -61,6 +69,7 @@
     "static/media/men-poster.jpg": "/all-about-feet/static/media/men-poster.99cb7256.jpg",
     "static/media/men-poster1.jpg": "/all-about-feet/static/media/men-poster1.f0a910f0.jpg",
     "static/media/men.jpg": "/all-about-feet/static/media/men.36bc0636.jpg",
+    "static/media/mx-720-818-shoe-s6Cxx2.jpg": "/all-about-feet/static/media/mx-720-818-shoe-s6Cxx2.f714d857.jpg",
     "static/media/product-1.jpg": "/all-about-feet/static/media/product-1.1856a381.jpg",
     "static/media/slider-1.jpg": "/all-about-feet/static/media/slider-1.1bc5e3bf.jpg",
     "static/media/slider-2.jpg": "/all-about-feet/static/media/slider-2.b28a3892.jpg",
@@ -73,8 +82,8 @@
   "entrypoints": [
     "static/js/runtime-main.63eb5428.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.83545ccb.chunk.js",
+    "static/js/2.71002b72.chunk.js",
     "static/css/main.23d0cbcf.chunk.css",
-    "static/js/main.63571562.chunk.js"
+    "static/js/main.14339a37.chunk.js"
   ]
 }
