@@ -7,6 +7,7 @@ import '../../index.css'
 // import Partners from './Partners'
 // import Footer from './Footer';
 import AnimatedButton from './AnimatedButton'
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,7 +22,7 @@ function Homepage() {
         <h2 style={{display:'block',textAlign:'center'}}> BEST SELLERS </h2>
     </div>
     <div className='ProductsAll' style={{}}><HomeProducts category="men"/></div>
-    <AnimatedButton name="Shop All Products"/>
+    <Link to="/men"><AnimatedButton name="Shop All Products"/></Link>
     {/* <Partners />
     <Footer /> */}
     </div>

@@ -142,13 +142,13 @@ function ProductPage(props) {
             <div className='productFlexSide'>
                 <h5>{data.pname}</h5>
                 <h5 style={{padding:'20px 0px 5px 0px'}}>${`${data.price}`}.00</h5>
-                <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>{`Even the all-powerful Pointing has no control about the
+                {/* <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>{`Even the all-powerful Pointing has no control about the
                     blind texts it is an almost unorthographic life One day however 
                     a small line of blind text by the name of Lorem Ipsum.`}
-                </h6>
-                {/* <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>
-                    {data.description}
-                 </h6> */}
+                </h6> */}
+                <h6 style={{padding:'5px 0px 15px 0px',lineHeight:'1.5em'}}>
+                    {data.desciption}
+                 </h6>
 
                 <div style={{ padding: '20px 0px', alignItems:'center'}}>
                     <h6 style={{paddingLeft:'0px', alignSelf:'center'}}>SIZE</h6>

@@ -8,7 +8,7 @@ import { css } from "@emotion/core";
 import {ScaleLoader} from 'react-spinners'
 
 export default function SideBar() {
-	const [allBrands, setAllBrands] = useState(['Nike','Adidas','Merrel','Gucci','Sketchers'])
+	const [allBrands, setAllBrands] = useState(['Nike','Adidas','Merrell','Gucci','Skechers'])
 	const [allStyles, setAllStyles] = useState(['Slip Ons','Boots','Sandals','Lace Ups','Oxfords'])
 	const [allColors, setAllColors] = useState(['Black','White','Blue','Red','Green','Grey','Orange','Cream','Brown'])
 	const [loading, setLoading] = useState(true)
@@ -53,7 +53,9 @@ export default function SideBar() {
 			setFilters(filterObj)
 		} else {
 			let filterObj = {...filters}
-			filterObj[e.target.filter].pop(e.target.name)
+			// filterObj[e.target.filter].pop(e.target.name)
+			var index = filterObj[e.target.filter].indexOf(e.target.name);
+			filterObj[e.target.filter].splice(index,1)
 			setFilters(filterObj)
 		}
 	}

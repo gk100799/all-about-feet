@@ -52,7 +52,10 @@ margin-top: -10px;
 .carImg {
   object-fit : cover;
   width:100%;
+  background: rgba(black, 0.5);
+  opacity: 0.7;
 }
+
 
 .colorlib-intro {
   padding:120px 190px;
@@ -633,6 +636,7 @@ a.nav-link {
   .productSingle{
     width: 170px;
     object-fit : cover;
+    min-height: 400px;
     margin-bottom:50px;
   }
   .productName {

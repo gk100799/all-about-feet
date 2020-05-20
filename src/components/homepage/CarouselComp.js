@@ -10,13 +10,13 @@ export default function CarouselComp() {
     return (
         <div className="CarouselComp1">
             <Carousel >
-                <Carousel.Item className='carouselCompInside'>
-                    <img
+                <Carousel.Item className='carouselCompInside' style={{background:"black"}}>
+                    <div style={{background:"black"}}><img
                         style={{ }}
                         className="carImg"
                         src={slider_1}
                         alt="First slide"
-                    />
+                    /></div>
                 <Carousel.Caption>
                         <div >
                             <h1 className="head-1" style={{color:"white"}}>Men's</h1>
@@ -27,7 +27,7 @@ export default function CarouselComp() {
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className='carouselCompInside'>
+                <Carousel.Item className='carouselCompInside' style={{background:"black"}}>
                     <img
                     style={{  }}
                     className="carImg"
@@ -43,7 +43,7 @@ export default function CarouselComp() {
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className='carouselCompInside'>
+                <Carousel.Item className='carouselCompInside' style={{background:"black"}}>
                     <img
                     style={{  }}
                     className="carImg"
