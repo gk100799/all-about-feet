@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// export const backendURL = "http://localhost:8000";
-export const backendURL = "https://allaboutfeet-live.herokuapp.com";
+export const backendURL = "http://localhost:8000";
+// export const backendURL = "https://allaboutfeet-live.herokuapp.com";
 
 export const request = axios.create({
   baseURL: backendURL,

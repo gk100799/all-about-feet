@@ -102,7 +102,7 @@ class NavBarComp1 extends Component {
               state: 'sdf'
             }}
             className="linkTag"
-          >Sign up</Link>
+          ><span style={{padding:"8px"}} >Sign up</span></Link>
         </Nav.Link>
 
         <Nav.Link name="SignIn" >
@@ -112,16 +112,16 @@ class NavBarComp1 extends Component {
               state: 'sdf'
             }}
             className="linkTag"
-          >Log in</Link>
+          ><span style={{padding:"8px"}} >Log in</span></Link>
         </Nav.Link>  
       </>
     );
 
     const logged_in_nav = (
       <>
-        <Nav.Link ><Link to='/cart' className="linkTag">{`Cart(${this.props.cart})`}</Link></Nav.Link>
-        <Nav.Link ><Link to='/account' className="linkTag">My account</Link></Nav.Link>
-        <Nav.Link onClick={this.props.handle_logout}>Logout</Nav.Link>
+        <Nav.Link ><Link to='/cart' className="linkTag"><span style={{padding:"8px"}} >{`Cart(${this.props.cart})`}</span></Link></Nav.Link>
+        <Nav.Link ><Link to='/account' className="linkTag"><span style={{padding:"8px"}} >My account</span></Link></Nav.Link>
+        <Nav.Link onClick={this.props.handle_logout}><span style={{padding:"8px"}} >Logout</span></Nav.Link>
       </>
     );
         
@@ -153,15 +153,15 @@ class NavBarComp1 extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
-            activeKey= {`/${this.state.activeTab}`}
+            activeKey= {`https://gk100799.github.io/all-about-feet/#/${this.state.activeTab}`}
             // activeKey = '/men'
             className="mr-auto"
             >
-                <Nav.Link href='/'><Link to='/' className="linkTag"><span onClick={(e) => this.activeTabChange(e,'id1')}>Home</span></Link></Nav.Link>
-                <Nav.Link href='/men'><Link to='/men' className="linkTag"><span onClick={(e) => this.activeTabChange(e,'id2')}>Men</span></Link></Nav.Link>
-                <Nav.Link href='/women'><Link to='/women' className="linkTag"><span onClick={(e) => this.activeTabChange(e,'id3')}>Women</span></Link></Nav.Link>
-                <Nav.Link href='/about'><Link to='/about' className="linkTag"><span onClick={(e) => this.activeTabChange(e,'id4')} >About</span></Link></Nav.Link>
-                <Nav.Link href='/contact'><Link to='/contact' className="linkTag"><span onClick={(e) => this.activeTabChange(e,'id5')}>Contact</span></Link></Nav.Link>
+                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/'><Link to='/' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id1')}>Home</span></Link></Nav.Link>
+                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/men'><Link to='/men' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id2')}>Men</span></Link></Nav.Link>
+                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/women'><Link to='/women' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id3')}>Women</span></Link></Nav.Link>
+                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/about'><Link to='/about' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id4')} >About</span></Link></Nav.Link>
+                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/contact'><Link to='/contact' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id5')}>Contact</span></Link></Nav.Link>
             </Nav>
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
