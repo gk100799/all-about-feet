@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/all-about-feet/static/css/main.604c4eac.chunk.css",
-    "main.js": "/all-about-feet/static/js/main.600930b0.chunk.js",
-    "main.js.map": "/all-about-feet/static/js/main.600930b0.chunk.js.map",
+    "main.js": "/all-about-feet/static/js/main.d0e69061.chunk.js",
+    "main.js.map": "/all-about-feet/static/js/main.d0e69061.chunk.js.map",
     "runtime-main.js": "/all-about-feet/static/js/runtime-main.63eb5428.js",
     "runtime-main.js.map": "/all-about-feet/static/js/runtime-main.63eb5428.js.map",
     "static/css/2.51de6d05.chunk.css": "/all-about-feet/static/css/2.51de6d05.chunk.css",
-    "static/js/2.2c3ed274.chunk.js": "/all-about-feet/static/js/2.2c3ed274.chunk.js",
-    "static/js/2.2c3ed274.chunk.js.map": "/all-about-feet/static/js/2.2c3ed274.chunk.js.map",
+    "static/js/2.f9f9ec86.chunk.js": "/all-about-feet/static/js/2.f9f9ec86.chunk.js",
+    "static/js/2.f9f9ec86.chunk.js.map": "/all-about-feet/static/js/2.f9f9ec86.chunk.js.map",
     "index.html": "/all-about-feet/index.html",
-    "precache-manifest.c845c8618c54afa95440a70d6a022538.js": "/all-about-feet/precache-manifest.c845c8618c54afa95440a70d6a022538.js",
+    "precache-manifest.0eeaec95782b0b8f145c7ab98b713a43.js": "/all-about-feet/precache-manifest.0eeaec95782b0b8f145c7ab98b713a43.js",
     "service-worker.js": "/all-about-feet/service-worker.js",
     "static/css/2.51de6d05.chunk.css.map": "/all-about-feet/static/css/2.51de6d05.chunk.css.map",
     "static/css/main.604c4eac.chunk.css.map": "/all-about-feet/static/css/main.604c4eac.chunk.css.map",
-    "static/js/2.2c3ed274.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.2c3ed274.chunk.js.LICENSE.txt",
+    "static/js/2.f9f9ec86.chunk.js.LICENSE.txt": "/all-about-feet/static/js/2.f9f9ec86.chunk.js.LICENSE.txt",
     "static/media/204106_BRN.jpg": "/all-about-feet/static/media/204106_BRN.773af45f.jpg",
     "static/media/54460_BBK.jpg": "/all-about-feet/static/media/54460_BBK.06857971.jpg",
     "static/media/575399_D60D0_9070_002_100_0000_Light.jpg": "/all-about-feet/static/media/575399_D60D0_9070_002_100_0000_Light.1d4bb7bd.jpg",
@@ -94,8 +94,8 @@
   "entrypoints": [
     "static/js/runtime-main.63eb5428.js",
     "static/css/2.51de6d05.chunk.css",
-    "static/js/2.2c3ed274.chunk.js",
+    "static/js/2.f9f9ec86.chunk.js",
     "static/css/main.604c4eac.chunk.css",
-    "static/js/main.600930b0.chunk.js"
+    "static/js/main.d0e69061.chunk.js"
   ]
 }
