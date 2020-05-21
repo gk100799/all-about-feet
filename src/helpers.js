@@ -5,7 +5,7 @@ export const backendURL = "https://allaboutfeet-live.herokuapp.com";
 
 export const request = axios.create({
   baseURL: backendURL,
-  // timeout: 10000
+  timeout: 10000
 });
 
 export const axiosInstance = axios.create({
@@ -14,7 +14,7 @@ export const axiosInstance = axios.create({
     "Content-Type": "application/json",
     "Authorization": `JWT ${localStorage.getItem('token')}`
   },
-  // timeout: 10000
+  timeout: 10000
 });
 
 export const axiosInstanceFormData = axios.create({
@@ -41,6 +41,33 @@ axiosInstance.interceptors.response.use(
     if (error.response.status === 408 || error.code === 'ECONNABORTED') {
         console.log(`A timeout happend on url ${error.config.url}`)
       }
+    if (error.response.status === 401 || error.code === 'Unauthorized') {
+      window.location.href = "https://gk100799.github.io/all-about-feet/#/login"
+    }
+    return error;
+  }
+);
+
+request.interceptors.request.use(
+  config => {
+    return config;
+  },
+  error => {
+    return Promise.reject(error);
+  }
+);
+
+request.interceptors.response.use(
+  response => {
+    return response;
+  },
+  error => {
+    if (error.response.status === 408 || error.code === 'ECONNABORTED') {
+        console.log(`A timeout happend on url ${error.config.url}`)
+      }
+    if (error.response.status === 401 || error.code === 'Unauthorized') {
+      window.location.href = "https://gk100799.github.io/all-about-feet/#/login"
+    }
     return error;
   }
 );

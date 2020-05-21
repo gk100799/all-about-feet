@@ -14,10 +14,11 @@ import './fonts/fonts.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/homepage/Footer.css'
 import 'antd/dist/antd.css';
-import { BackTop, message } from 'antd';
+import { BackTop, message, Result, Button } from 'antd';
 import SignIn from './components/login/SignIn';
 import SignUp from './components/login/SignUp';
 import ScrollToTop from './components/homepage/ScrollToTop'
+import NotFoundPage from './components/homepage/NotFoundPage'
 import {axiosInstance, request} from './helpers'
 
 
@@ -34,6 +35,7 @@ class App extends Component {
     this.setstate = this.setstate.bind(this);
     this.handleCartInc = this.handleCartInc.bind(this);
     this.handleCartDec = this.handleCartDec.bind(this);
+    this.handleOrder = this.handleOrder.bind(this);
   }
 
   componentDidMount() {
@@ -75,6 +77,12 @@ class App extends Component {
     })
   }
 
+  handleOrder = () => {
+    this.setState({
+      cart : 0,
+    })
+  }
+
 
   render() {
     return (
@@ -84,25 +92,29 @@ class App extends Component {
         {/* <Switch> */} 
           <ScrollToTop />
           <Route 
-            path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/login','/signup']} 
+            path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/login','/signup','/account']} 
             exact 
             render={(props) => <NavBarComp1 logged_in={this.state.logged_in} handle_logout={this.handle_logout} cart={this.state.cart}/>}
           />
           <Route path="/" exact component={Homepage} />
           <Route path="/men" exact component={Men} />
           <Route path='/women' exact component={Women} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/cart" exact render={(props) => <Cart handleCartDec={this.handleCartDec} />} />
+          <Route path="/about" exact component={NotFoundPage} />
+          <Route path="/contact" exact component={NotFoundPage} />
+          <Route path="/cart" exact render={(props) => <Cart handleCartDec={this.handleCartDec} handleOrder={this.handleOrder} />} />
           <Route path="/product/:pid" exact render={(props) => <ProductPage logged_in={this.state.logged_in} handleCartInc={this.handleCartInc} />} />
           <Route path='/login' exact render={(props) => <SignIn setstate={this.setstate} />} /> 
           <Route path='/signup' exact render={(props) => <SignUp setstate={this.setstate} />} /> 
+          <Route path="/account" exact component={NotFoundPage} />
         {/* </Switch> */}
         <div className="partnerfooter">
-        <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={Partners} />
-          <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={Footer} />
+        <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/account']} exact component={Partners} />
+          <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid','/account']} exact component={Footer} />
         </div>
+        
         {/* <Route path={['/','/men','/women','/about','/contact','/cart','/product/:pid']} exact component={BackToTopComp1} /> */}
+        {/* <Route path="/404" exact component={NotFoundPage} />
+        <Redirect to="/404" /> */}
         <BackTop style={{right:'35px'}} />
       </Router>
     )

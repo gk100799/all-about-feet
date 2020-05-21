@@ -25,6 +25,7 @@ export default function Cart(props) {
     const [price, setPrice] = useState()
     const [process, setProcess] = useState(0)
     const [userDetails, setUserDetails] = useState()
+    const [btnLoading, setBtnLoading] = useState();
 
     const override = css`
         padding-top: 50px;
@@ -36,6 +37,7 @@ export default function Cart(props) {
         axiosInstance.get(`/api/cart-items/`)
             .then(res => setCartItems(res.data))
             .then(res => setLoading(false))
+            .catch(err => console.log(err))
     }, []);
 
     function deleteItem(id) {
@@ -103,11 +105,14 @@ export default function Cart(props) {
     };
 
     const onFinish = values => {
+        setBtnLoading(true)
         console.log(values);
         setUserDetails(values)
         let data=userDetails
         axiosInstance.post('/api/orders', data)
           .then(res => setProcess(2))
+          .then(res => props.handleOrder())
+          .then(res => setBtnLoading(false))
         console.log(userDetails)
     }
 
@@ -203,7 +208,8 @@ export default function Cart(props) {
                                             </Form.Item>
                                             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
                                                 <div style={{ backgroundColor: 'inherit', paddingTop: '10px' }}>
-                                                    <button type="submit" className="buttonClass" style={{ height: '40px', width: '130px', padding: '5px' }} >PLACE ORDER</button>
+                                                    {/* <button type="submit" className="buttonClass" style={{ height: '40px', width: '130px', padding: '5px' }} >PLACE ORDER</button> */}
+                                                    <Button htmlType="submit" loading={btnLoading} className="buttonClass2">PLACE ORDER</Button>
                                                 </div>
                                             </Form.Item>
                                         </Form>
