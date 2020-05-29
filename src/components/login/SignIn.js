@@ -69,6 +69,7 @@ function SignIn(props) {
       })
       .then(res => window.location.href='https://gk100799.github.io/all-about-feet/#/')
       .then(res=> message.success("Logged in successfully!"))
+      .then(res => console.log("Logged In"))
       .catch(err => message.error("Invalid Credentials"));
   };
 
