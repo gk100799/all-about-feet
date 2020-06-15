@@ -76,7 +76,7 @@ function SignUp(props) {
         localStorage.setItem('token', json.data.token);
         props.setstate(true,json.data.username)
       })
-      .then(res => window.location.href='https://gk100799.github.io/all-about-feet/#/')
+      .then(res => window.location.href='/')
       .then(res=> message.success("Account created successfully!"))
       .catch(err => message.error("An Account already exists with this username"))
   };

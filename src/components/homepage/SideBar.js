@@ -6,8 +6,9 @@ import { Checkbox } from 'antd';
 import {axiosInstance} from '../../helpers'
 import { css } from "@emotion/core";
 import {ScaleLoader} from 'react-spinners'
+import { withRouter,Link, Redirect } from 'react-router-dom'
 
-export default function SideBar() {
+function SideBar(props) {
 	const [allBrands, setAllBrands] = useState(['Nike','Adidas','Merrell','Gucci','Skechers'])
 	const [allStyles, setAllStyles] = useState(['Slip Ons','Boots','Sandals','Lace Ups','Oxfords'])
 	const [allColors, setAllColors] = useState(['Black','White','Blue','Red','Green','Grey','Orange','Cream','Brown'])
@@ -18,12 +19,17 @@ export default function SideBar() {
 		colors: [],
 	})
 	const [products, setProducts] = useState(null)
+	const [gender, setGender] = useState()
 
 	const override = css`
 	padding-top: 70px;
 	text-align: center;
 	align-items: center;
 	`;
+
+	useEffect(() => {
+		setGender(props.location.pathname.slice(1))
+	},[])
 
 	useEffect(() => {
 		let data = filters
@@ -60,10 +66,21 @@ export default function SideBar() {
 		}
 	}
 
+	const onGenderChange = (e) => {
+		props.history.push(`${e.target.name}`)
+	}
+
     return (
         <div className='mainFlex DeskOnly'>
             <div className='leftBar'>
-                <div className="side border mb-1">
+				<div className="side border mb-1">
+                    <h5 className="h4Tag">GENDER</h5>
+					<ul className="ulTag" name='gender'>
+						<li><Checkbox checked={gender==="men" ? true : false} filter="gender" name="men" onChange={onGenderChange}>Male</Checkbox></li>
+						<li><Checkbox checked={gender==="women" ? true : false} filter="gender" name="women" onChange={onGenderChange}>Female</Checkbox></li>
+					</ul>
+                </div>
+				<div className="side border mb-1">
                     <h5 className="h4Tag">BRAND</h5>
                         <ul className="ulTag" name='brands'>
 							{allBrands.map((item,value) => (
@@ -108,3 +125,5 @@ export default function SideBar() {
         </div>
 	)
 }
+
+export default withRouter(SideBar)

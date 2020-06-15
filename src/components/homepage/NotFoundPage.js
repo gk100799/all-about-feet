@@ -8,7 +8,7 @@ function NotFoundPage() {
         status="404"
         title="404"
         subTitle="Sorry, the page is under construction."
-        extra={<Button href="https://gk100799.github.io/all-about-feet/#/" type="primary">Back Home</Button>}
+        extra={<Button href="/" type="primary">Back Home</Button>}
       />
 }
 

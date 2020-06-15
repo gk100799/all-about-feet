@@ -259,7 +259,7 @@ export default function Cart(props) {
                         title="Thank you for purchasing, Your order is complete"
                         // subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
                         extra={[
-                          <Button onClick={() => window.location.hash="/"} type="primary" key="buy">Home</Button>,
+                          <Button onClick={() => window.location.href="/"} type="primary" key="buy">Home</Button>,
                         ]}
                       />
                         }
