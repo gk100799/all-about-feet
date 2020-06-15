@@ -73,7 +73,7 @@ function SideBar(props) {
     return (
         <div className='mainFlex DeskOnly'>
             <div className='leftBar'>
-				<div className="side border mb-1">
+		<div className="side border mb-1">
                     <h5 className="h4Tag">GENDER</h5>
 					<ul className="ulTag" name='gender'>
 						<li><Checkbox checked={gender==="men" ? true : false} filter="gender" name="men" onChange={onGenderChange}>Male</Checkbox></li>
