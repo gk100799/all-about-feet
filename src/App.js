@@ -86,7 +86,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router basename='/' >
+      <Router basename={process.env.PUBLIC_URL} >
       {/* { this.state.location && <NavBarComp1 /> } */}
       {/* <NavBarComp1 /> */}
         {/* <Switch> */} 

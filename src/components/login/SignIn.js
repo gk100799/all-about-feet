@@ -67,7 +67,7 @@ function SignIn(props) {
         localStorage.setItem('token', res.data.token);
         props.setstate(true, res.data.user.username)
       })
-      .then(res => window.location.href='https://gk100799.github.io/all-about-feet/#/')
+      .then(res => window.location.href='/')
       .then(res=> message.success("Logged in successfully!"))
       .then(res => console.log("Logged In"))
       .catch(err => message.error("Invalid Credentials"));

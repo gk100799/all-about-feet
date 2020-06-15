@@ -22,12 +22,12 @@ class NavBarComp1 extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        activeTab : window.location.hash.slice(2),
+        activeTab : window.location.pathname.slice(1),
         ModalText: 'Content of the modal',
         visible: false,
         confirmLoading: false,
         modalType : '',
-        location : window.location.hash.slice(1),
+        location : window.location.pathname.slice(1),
       }
     }
     showModal = (e) => {
@@ -153,15 +153,15 @@ class NavBarComp1 extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
-            activeKey= {`https://gk100799.github.io/all-about-feet/#/${this.state.activeTab}`}
+            activeKey= {`/${this.state.activeTab}`}
             // activeKey = '/men'
             className="mr-auto"
             >
-                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/'><Link to='/' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id1')}>Home</span></Link></Nav.Link>
-                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/men'><Link to='/men' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id2')}>Men</span></Link></Nav.Link>
-                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/women'><Link to='/women' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id3')}>Women</span></Link></Nav.Link>
-                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/about'><Link to='/about' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id4')} >About</span></Link></Nav.Link>
-                <Nav.Link href='https://gk100799.github.io/all-about-feet/#/contact'><Link to='/contact' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id5')}>Contact</span></Link></Nav.Link>
+                <Nav.Link href='/'><Link to='/' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id1')}>Home</span></Link></Nav.Link>
+                <Nav.Link href='/men'><Link to={{pathname: "/men", state: 'Men'}} className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id2')}>Men</span></Link></Nav.Link>
+                <Nav.Link href='/women'><Link to={{pathname: "/women", state: 'Women'}} className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id3')}>Women</span></Link></Nav.Link>
+                <Nav.Link href='/about'><Link to='/about' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id4')} >About</span></Link></Nav.Link>
+                <Nav.Link href='/contact'><Link to='/contact' className="linkTag"><span style={{padding:"8px"}} onClick={(e) => this.activeTabChange(e,'id5')}>Contact</span></Link></Nav.Link>
             </Nav>
             
             <Nav inline style={{marginRight:'0px'}} defaultActiveKey=''>
