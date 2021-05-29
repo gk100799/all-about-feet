@@ -21,8 +21,6 @@ import ScrollToTop from './components/homepage/ScrollToTop'
 import NotFoundPage from './components/homepage/NotFoundPage'
 import {axiosInstance, request} from './helpers'
 
-
-
 class App extends Component { 
   constructor(props) {
     super(props)

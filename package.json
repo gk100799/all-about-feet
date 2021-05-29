@@ -1,6 +1,6 @@
 {
-  "homepage": "http://allaboutfeet.site/",
-  "name": "sante-frontend",
+  "homepage": "http://allaboutfeet.gopalkrishna.tech/",
+  "name": "allaboutfeet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

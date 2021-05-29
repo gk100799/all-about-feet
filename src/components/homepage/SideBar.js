@@ -114,7 +114,7 @@ function SideBar(props) {
                     css={override}
                     height={60}
                     width={5}
-                    color={"#123abc"}
+                    color={"#343a40"}
                     loading={loading}
                 />
                 <ProductsComp products={products} />

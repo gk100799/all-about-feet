@@ -125,7 +125,7 @@ export default function Cart(props) {
                         css={override}
                         height={50}
                         width={5}
-                        color={"#123abc"}
+                        color={"#343a40"}
                         loading={loading}
                     />
                 </div>
